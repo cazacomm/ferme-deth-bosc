@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1250" width="1000" height="1250" role="img" aria-label="Galerie 2">
+  <defs>
+    <pattern id="p" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="28" stroke="#DED2BB" stroke-width="7"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="1250" fill="#EDE4D4"/>
+  <rect width="1000" height="1250" fill="url(#p)" opacity=".5"/>
+  <rect x="10" y="10" width="980" height="1230" fill="none" stroke="#C7B79A" stroke-width="3" stroke-dasharray="14 10"/>
+  <g transform="translate(500 625)" text-anchor="middle" font-family="Georgia, serif">
+    <circle cx="0" cy="-109.2" r="59.8" fill="none" stroke="#1F3D2B" stroke-width="3" opacity=".55"/>
+    <path d="M -23.400000000000002 -109.2 l 18.2 23.400000000000002 l 28.6 -39" fill="none" stroke="#C4622D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text y="10.4" font-size="52" fill="#1F3D2B">Galerie 2</text>
+    <text y="64.8" font-size="32" fill="#C4622D" font-family="Helvetica, Arial, sans-serif" letter-spacing="2">1000 × 1250 px</text>
+    <text y="109.6" font-size="28" fill="#7A6E5C" font-family="Helvetica, Arial, sans-serif">Produit en gros plan</text>
+  </g>
+</svg>

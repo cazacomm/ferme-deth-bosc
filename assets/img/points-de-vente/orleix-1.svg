@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200" role="img" aria-label="Magasin d’Orleix">
+  <defs>
+    <pattern id="p" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="28" stroke="#DED2BB" stroke-width="7"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1200" fill="#EDE4D4"/>
+  <rect width="1600" height="1200" fill="url(#p)" opacity=".5"/>
+  <rect x="10" y="10" width="1580" height="1180" fill="none" stroke="#C7B79A" stroke-width="3" stroke-dasharray="14 10"/>
+  <g transform="translate(800 600)" text-anchor="middle" font-family="Georgia, serif">
+    <circle cx="0" cy="-130.20000000000002" r="71.3" fill="none" stroke="#1F3D2B" stroke-width="3" opacity=".55"/>
+    <path d="M -27.900000000000002 -130.20000000000002 l 21.7 27.900000000000002 l 34.1 -46.5" fill="none" stroke="#C4622D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text y="12.4" font-size="62" fill="#1F3D2B">Magasin d’Orleix</text>
+    <text y="77" font-size="38" fill="#C4622D" font-family="Helvetica, Arial, sans-serif" letter-spacing="2">1600 × 1200 px</text>
+    <text y="131.4" font-size="34" fill="#7A6E5C" font-family="Helvetica, Arial, sans-serif">Façade ou vue large de l’intérieur, après réaménagement</text>
+  </g>
+</svg>
