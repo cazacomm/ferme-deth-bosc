@@ -179,14 +179,15 @@
         }).join('');
       }
 
-      var badge = document.querySelector('[data-open-badge="' + loc.id + '"]');
-      if (badge) {
+      var badges = document.querySelectorAll('[data-open-badge="' + loc.id + '"]');
+      Array.prototype.forEach.call(badges, function (badge) {
         var st = statusFor(loc.hours[today], nowMin);
         badge.textContent = st.state === 'open'
           ? 'Ouvert' + (st.detail ? ' · ' + st.detail.toLowerCase() : '')
           : (st.detail ? st.label + ' · ' + st.detail.toLowerCase() : st.label);
-        badge.className = 'shop__badge ' + (st.state === 'open' ? 'is-open' : 'is-closed');
-      }
+        badge.classList.toggle('is-open', st.state === 'open');
+        badge.classList.toggle('is-closed', st.state !== 'open');
+      });
     });
   }
 
@@ -214,7 +215,7 @@
      --------------------------------------------------------- */
   function initHeader() {
     var header = document.getElementById('header');
-    var hero = document.querySelector('.hero');
+    var hero = document.querySelector('.hero, .page-hero');
     if (!header) return;
 
     var onScroll = function () {
@@ -237,51 +238,30 @@
     var nav = document.getElementById('nav');
     if (!burger || !nav) return;
 
-    var close = function () {
-      burger.setAttribute('aria-expanded', 'false');
-      nav.classList.remove('is-open');
-      document.body.classList.remove('nav-open');
+    var label = burger.querySelector('.burger__label');
+
+    var setState = function (open) {
+      burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+      if (label) label.textContent = open ? 'Fermer' : 'Menu';
+      nav.classList.toggle('is-open', open);
+      document.body.classList.toggle('nav-open', open);
     };
 
+    var close = function () { setState(false); };
+
+    setState(false);
     burger.addEventListener('click', function () {
-      var open = burger.getAttribute('aria-expanded') === 'true';
-      burger.setAttribute('aria-expanded', String(!open));
-      nav.classList.toggle('is-open', !open);
-      document.body.classList.toggle('nav-open', !open);
+      setState(burger.getAttribute('aria-expanded') !== 'true');
     });
 
+    /* un lien ferme le menu, un clic dans le vide aussi : on doit
+       pouvoir ouvrir le menu juste pour voir, puis revenir en arrière */
     nav.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') close();
+      if (e.target === nav || e.target.tagName === 'A') close();
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') close();
-    });
-  }
-
-  /* ---------------------------------------------------------
-     Lien de nav actif selon la section visible
-     --------------------------------------------------------- */
-  function initScrollSpy() {
-    var links = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
-    if (!links.length || !('IntersectionObserver' in window)) return;
-
-    var map = {};
-    links.forEach(function (a) {
-      var el = document.querySelector(a.getAttribute('href'));
-      if (el) map[el.id] = a;
-    });
-
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) {
-          links.forEach(function (a) { a.classList.remove('is-active'); });
-          if (map[en.target.id]) map[en.target.id].classList.add('is-active');
-        }
-      });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-
-    Object.keys(map).forEach(function (id) {
-      obs.observe(document.getElementById(id));
     });
   }
 
@@ -323,14 +303,14 @@
     var year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 
-    /* V1 : le formulaire n'a pas encore de backend (voir INFOS-MANQUANTES.md) */
-    var form = document.getElementById('contact-form');
-    if (form) {
+    /* Les formulaires n'ont pas encore de backend (voir INFOS-MANQUANTES.md) */
+    var forms = document.querySelectorAll('form[data-needs="formulaire-backend"]');
+    Array.prototype.forEach.call(forms, function (form) {
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         window.alert('Formulaire à connecter (V2). En attendant, appelez-nous ou écrivez-nous directement.');
       });
-    }
+    });
   }
 
   /* ---------------------------------------------------------
@@ -342,7 +322,6 @@
     renderMarkets();
     initHeader();
     initNav();
-    initScrollSpy();
     initReveal();
     initMisc();
     /* rafraîchit l'état ouvert/fermé toutes les minutes */

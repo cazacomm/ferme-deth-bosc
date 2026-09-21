@@ -4,16 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>La Ferme Deth Bosc, primeur et producteur de légumes à Orleix et Tarbes</title>
-<meta name="description" content="Producteur de légumes et primeur dans les Hautes-Pyrénées. Fruits et légumes, fromage à la coupe, charcuterie, crèmerie, vin, pain et épicerie. Magasin à Orleix, étal aux Halles Brauhauban à Tarbes et sur les marchés de Luz, Argelès-Gazost et Marcadieu.">
-<link rel="canonical" href="https://www.fermedethbosc.fr/">
+<meta name="description" content="Producteur de légumes et primeur dans les Hautes-Pyrénées. Magasin à Orleix, étal aux Halles Brauhauban à Tarbes, présents sur les marchés de Luz, Argelès-Gazost et Marcadieu.">
+<link rel="canonical" href="https://cazacomm.github.io/ferme-deth-bosc/">
 <meta name="theme-color" content="#1F3D2B">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="La Ferme Deth Bosc">
-<meta property="og:title" content="La Ferme Deth Bosc, primeur et producteur de légumes">
-<meta property="og:description" content="Le meilleur rapport qualité-prix des Hautes-Pyrénées. Magasin à Orleix, étal aux Halles Brauhauban, présents sur les marchés.">
-<meta property="og:image" content="assets/img/og-image.svg">
+<meta property="og:title" content="La Ferme Deth Bosc, primeur et producteur de légumes à Orleix et Tarbes">
+<meta property="og:description" content="Producteur de légumes et primeur dans les Hautes-Pyrénées. Magasin à Orleix, étal aux Halles Brauhauban à Tarbes, présents sur les marchés de Luz, Argelès-Gazost et Marcadieu.">
+<meta property="og:url" content="https://cazacomm.github.io/ferme-deth-bosc/">
+<meta property="og:image" content="https://cazacomm.github.io/ferme-deth-bosc/assets/img/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -23,17 +24,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 <body>
 
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-<!-- ============ HEADER ============ -->
+<!-- ===================================================================
+     EN-TÊTE COMMUN : identique sur toutes les pages.
+     Toute modification ici doit être répercutée sur chaque fichier .html
+     =================================================================== -->
 <header class="site-header" id="header">
   <div class="shell header-inner">
-    <a class="brand" href="#top" aria-label="La Ferme Deth Bosc, accueil">
-      <!-- PLACEHOLDER LOGO : remplacer par le logo client (SVG de préférence) -->
+    <a class="brand" href="index.html" aria-label="La Ferme Deth Bosc, retour à l’accueil">
       <img src="assets/img/logo.svg" alt="" class="brand__mark" width="44" height="44">
       <span class="brand__text">
         <span class="brand__line1">La Ferme</span>
@@ -42,12 +44,12 @@
     </a>
 
     <nav class="nav" id="nav" aria-label="Navigation principale">
-      <a href="#points-de-vente">Points de vente</a>
-      <a href="#marches">Marchés</a>
-      <a href="#rayons">Nos rayons</a>
-      <a href="#ferme">La ferme</a>
-      <a href="#pros">Professionnels</a>
-      <a href="#contact">Contact</a>
+      <a href="points-de-vente.html">Points de vente</a>
+      <a href="marches.html">Marchés</a>
+      <a href="nos-produits.html">Nos produits</a>
+      <a href="la-ferme.html">La ferme</a>
+      <a href="professionnels.html">Professionnels</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
     <a class="btn btn--sm btn--solid header-cta" href="tel:+33500000000" data-needs="telephone">
@@ -55,15 +57,15 @@
       <span>Appeler</span>
     </a>
 
-    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
-      <span></span><span></span><span></span>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">
+      <span class="burger__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="burger__label">Menu</span>
     </button>
   </div>
 </header>
 
 <main id="contenu">
 
-<!-- ============ HERO ============ -->
 <section class="hero" id="top">
 
   <!-- ===== FOND DU HERO : diaporama photo / vidéo =====
@@ -71,7 +73,6 @@
        Pour passer une diapo en vidéo, remplacer l'<img> par :
        <video src="assets/video/ferme.mp4" poster="assets/img/hero/hero-1.jpg"
               muted loop playsinline preload="metadata"></video>
-       Les vidéos rendent la main au diaporama quand elles se terminent.
   -->
   <div class="hero__media" id="hero-media" aria-hidden="true">
     <figure class="hero__slide is-active">
@@ -102,399 +103,169 @@
       des Hautes-Pyrénées, sept jours sur sept.
     </p>
     <div class="hero__cta reveal">
-      <a class="btn btn--solid btn--lg" href="#points-de-vente">Où nous trouver aujourd'hui</a>
-      <a class="btn btn--ghost btn--lg" href="#rayons">Découvrir nos rayons</a>
+      <a class="btn btn--solid btn--lg" href="#aujourdhui">Où nous trouver aujourd’hui</a>
+      <a class="btn btn--ghost btn--lg" href="nos-produits.html">Découvrir nos produits</a>
     </div>
   </div>
 </section>
 
-<!-- ============ BANDEAU OUVERT AUJOURD'HUI ============ -->
 <section class="today" id="aujourdhui" aria-labelledby="today-title">
   <div class="shell">
     <div class="today__head">
       <h2 id="today-title" class="today__title">
         <span class="pulse" aria-hidden="true"></span>
-        Aujourd'hui, <span id="today-date"></span>
+        Aujourd’hui, <span id="today-date"></span>
       </h2>
       <p class="today__sub">Nos points de vente ouverts en ce moment</p>
     </div>
-    <div class="today__grid" id="today-grid">
-      <!-- rempli par assets/js/main.js -->
-    </div>
+    <div class="today__grid" id="today-grid"></div>
   </div>
 </section>
 
-<!-- ============ PILIERS ============ -->
 <section class="pillars" aria-label="Nos engagements">
   <div class="shell pillars__grid">
     <article class="pillar reveal">
       <span class="pillar__num">01</span>
       <h3>Producteur <span class="amp">&amp;</span> primeur</h3>
-      <p>Une exploitation maraîchère et un commerce de détail réunis sous le même nom. Nos légumes viennent du champ, le reste d'un sourcing choisi main.</p>
+      <p>Une exploitation maraîchère et un commerce de détail réunis sous le même nom. Nos légumes viennent du champ, le reste d’un sourcing choisi main.</p>
     </article>
     <article class="pillar reveal">
       <span class="pillar__num">02</span>
       <h3>Le juste prix, toujours</h3>
-      <p>Notre métier, c'est de rendre le bon produit accessible. Des prix pensés pour les familles, sans compromis sur la fraîcheur.</p>
+      <p>Notre métier, c’est de rendre le bon produit accessible. Des prix pensés pour les familles, sans compromis sur la fraîcheur.</p>
     </article>
     <article class="pillar reveal">
       <span class="pillar__num">03</span>
       <h3>Près de chez vous, 7j/7</h3>
-      <p>Les Halles à Orleix, l'étal de Brauhauban à Tarbes, et trois marchés dans la semaine. Où que vous soyez, nous ne sommes jamais loin.</p>
+      <p>Les Halles à Orleix, l’étal de Brauhauban à Tarbes, et trois marchés dans la semaine. Où que vous soyez, nous ne sommes jamais loin.</p>
     </article>
   </div>
 </section>
 
-<!-- ============ POINTS DE VENTE ============ -->
-<section class="section section--shops" id="points-de-vente">
+<section class="section">
   <div class="shell">
     <header class="sec-head reveal">
       <p class="eyebrow">Nous trouver</p>
-      <h2 class="sec-title">Deux adresses, <span class="ital">tous les jours</span></h2>
-      <p class="sec-lead">Un magasin complet à Orleix, un étal de fruits et légumes au cœur de Tarbes.</p>
+      <h2 class="sec-title">Deux adresses et <span class="ital">trois marchés</span></h2>
+      <p class="sec-lead">Un magasin complet à Orleix, un étal de fruits et légumes au cœur de Tarbes, et le camion sur les routes trois matins par semaine.</p>
     </header>
 
-    <div class="shops">
-
-      <!-- POINT DE VENTE 1 -->
-      <article class="shop reveal" id="orleix">
-        <div class="shop__media">
-          <!-- PLACEHOLDER PHOTO : façade / intérieur du magasin d'Orleix (paysage, 1600x1200) -->
+    <div class="places">
+      <a class="place reveal" href="points-de-vente.html#orleix">
+        <span class="place__media">
           <img src="assets/img/points-de-vente/orleix-1.svg" alt="Les Halles de la Ferme Deth Bosc à Orleix" loading="lazy" width="1600" height="1200">
           <span class="shop__badge" data-open-badge="orleix"></span>
-        </div>
-        <div class="shop__body">
-          <p class="shop__kicker">Point de vente principal</p>
-          <h3 class="shop__name">Les Halles de la<br>Ferme Deth Bosc</h3>
-          <p class="shop__addr">
-            <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7m0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5"/></svg>
-            6 ter route de Rabastens<br>65800 Orleix
-          </p>
+        </span>
+        <span class="place__body">
+          <span class="place__kicker">Magasin</span>
+          <span class="place__name">Les Halles d’Orleix</span>
+          <span class="place__meta">Fruits et légumes, fromage à la coupe, charcuterie, crèmerie, vin, pain, épicerie</span>
+          <span class="place__more">Horaires et itinéraire</span>
+        </span>
+      </a>
 
-          <ul class="shop__tags">
-            <li>Fruits &amp; légumes</li>
-            <li>Fromage à la coupe</li>
-            <li>Charcuterie</li>
-            <li>Crèmerie</li>
-            <li>Vin</li>
-            <li>Pain</li>
-            <li>Épicerie</li>
-          </ul>
-
-          <table class="hours" data-hours="orleix">
-            <caption class="sr-only">Horaires d'ouverture des Halles de la Ferme Deth Bosc</caption>
-            <tbody><!-- rempli par main.js --></tbody>
-          </table>
-
-          <div class="shop__actions">
-            <a class="btn btn--solid" href="https://www.google.com/maps/search/?api=1&query=6+ter+route+de+Rabastens+65800+Orleix" target="_blank" rel="noopener">Itinéraire</a>
-            <a class="btn btn--ghost" href="tel:+33500000000" data-needs="telephone">Appeler le magasin</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- POINT DE VENTE 2 -->
-      <article class="shop shop--alt reveal" id="brauhauban">
-        <div class="shop__media">
-          <!-- PLACEHOLDER PHOTO : l'étal sous la halle Brauhauban (paysage, 1600x1200) -->
-          <img src="assets/img/points-de-vente/brauhauban-1.svg" alt="L'étal de la Ferme Deth Bosc sous la halle Brauhauban à Tarbes" loading="lazy" width="1600" height="1200">
+      <a class="place reveal" href="points-de-vente.html#brauhauban">
+        <span class="place__media">
+          <img src="assets/img/points-de-vente/brauhauban-1.svg" alt="L’étal de la Ferme Deth Bosc sous la halle Brauhauban" loading="lazy" width="1600" height="1200">
           <span class="shop__badge" data-open-badge="brauhauban"></span>
-        </div>
-        <div class="shop__body">
-          <p class="shop__kicker">Au cœur de Tarbes</p>
-          <h3 class="shop__name">L'étal sous la<br>halle Brauhauban</h3>
-          <p class="shop__addr">
-            <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7m0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5"/></svg>
-            Halles Brauhauban<br>65000 Tarbes
-          </p>
+        </span>
+        <span class="place__body">
+          <span class="place__kicker">Étal</span>
+          <span class="place__name">Halle Brauhauban</span>
+          <span class="place__meta">Fruits et légumes, au cœur de Tarbes, cinq jours par semaine</span>
+          <span class="place__more">Horaires et itinéraire</span>
+        </span>
+      </a>
 
-          <ul class="shop__tags">
-            <li>Fruits &amp; légumes</li>
-          </ul>
-
-          <table class="hours" data-hours="brauhauban">
-            <caption class="sr-only">Horaires de l'étal sous la halle Brauhauban</caption>
-            <tbody><!-- rempli par main.js --></tbody>
-          </table>
-
-          <div class="shop__actions">
-            <a class="btn btn--solid" href="https://www.google.com/maps/search/?api=1&query=Halles+Brauhauban+Tarbes" target="_blank" rel="noopener">Itinéraire</a>
-          </div>
-        </div>
-      </article>
-
+      <a class="place reveal" href="marches.html">
+        <span class="place__media">
+          <img src="assets/img/marches/marche-panorama.svg" alt="L’étal de la Ferme Deth Bosc sur un marché" loading="lazy" width="2400" height="900">
+        </span>
+        <span class="place__body">
+          <span class="place__kicker">Marchés</span>
+          <span class="place__name">Luz, Argelès, Marcadieu</span>
+          <span class="place__meta">Trois matins par semaine, uniquement des fruits et légumes</span>
+          <span class="place__more">Voir le planning de la semaine</span>
+        </span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ============ MARCHÉS ============ -->
-<section class="section section--markets" id="marches">
+<section class="section section--markets">
   <div class="shell">
     <header class="sec-head reveal">
-      <p class="eyebrow">Sur les routes</p>
-      <h2 class="sec-title">Nos marchés <span class="ital">de la semaine</span></h2>
-      <p class="sec-lead">Trois matins par semaine, nous chargeons le camion et nous venons à vous, avec uniquement des fruits et légumes.</p>
+      <p class="eyebrow">Notre offre</p>
+      <h2 class="sec-title">Tout ce qu’il faut, <span class="ital">bien choisi</span></h2>
+      <p class="sec-lead">Sept rayons complets aux Halles d’Orleix, et le meilleur des fruits et légumes partout ailleurs.</p>
     </header>
 
-    <ol class="markets" id="markets-list">
-      <!-- rempli par main.js -->
-    </ol>
+    <div class="teasers">
+      <a class="teaser reveal" href="nos-produits.html#fruits-legumes">
+        <img src="assets/img/rayons/fruits-legumes.svg" alt="" loading="lazy" width="2000" height="1400">
+        <span>Fruits &amp; légumes</span>
+      </a>
+      <a class="teaser reveal" href="nos-produits.html#fromage">
+        <img src="assets/img/rayons/fromage.svg" alt="" loading="lazy" width="1400" height="1400">
+        <span>Fromage à la coupe</span>
+      </a>
+      <a class="teaser reveal" href="nos-produits.html#charcuterie">
+        <img src="assets/img/rayons/charcuterie.svg" alt="" loading="lazy" width="1400" height="1400">
+        <span>Charcuterie</span>
+      </a>
+      <a class="teaser reveal" href="nos-produits.html#cremerie">
+        <img src="assets/img/rayons/cremerie.svg" alt="" loading="lazy" width="1400" height="1400">
+        <span>Crèmerie</span>
+      </a>
+    </div>
 
-    <figure class="markets__band reveal">
-      <!-- PLACEHOLDER PHOTO : l'étal sur un marché, large et panoramique (2400x900) -->
-      <img src="assets/img/marches/marche-panorama.svg" alt="L'étal de la Ferme Deth Bosc sur un marché des Hautes-Pyrénées" loading="lazy" width="2400" height="900">
-    </figure>
-  </div>
-</section>
-
-<!-- ============ NOS RAYONS ============ -->
-<section class="section section--rayons" id="rayons">
-  <div class="shell">
-    <header class="sec-head reveal">
-      <p class="eyebrow">Notre offre aux particuliers</p>
-      <h2 class="sec-title">Tout ce qu'il faut, <span class="ital">bien choisi</span></h2>
-      <p class="sec-lead">Aux Halles d'Orleix, sept rayons complets. Sur les marchés et à Brauhauban, le meilleur des fruits et légumes.</p>
-    </header>
-
-    <div class="rayons">
-      <article class="rayon rayon--wide reveal">
-        <!-- PLACEHOLDER PHOTO : étal fruits & légumes, la plus belle photo du site (2000x1400) -->
-        <img src="assets/img/rayons/fruits-legumes.svg" alt="Rayon fruits et légumes" loading="lazy" width="2000" height="1400">
-        <div class="rayon__txt"><h3>Fruits &amp; légumes</h3><p>Le cœur du métier. Nos productions maraîchères et une sélection quotidienne au meilleur prix.</p></div>
-      </article>
-      <article class="rayon reveal">
-        <!-- PLACEHOLDER PHOTO : le comptoir fromage, meules et coupe (1400x1400) -->
-        <img src="assets/img/rayons/fromage.svg" alt="Fromage à la coupe" loading="lazy" width="1400" height="1400">
-        <div class="rayon__txt"><h3>Fromage à la coupe</h3><p>Coupé devant vous, à la demande.</p></div>
-      </article>
-      <article class="rayon reveal">
-        <!-- PLACEHOLDER PHOTO : charcuterie (1400x1400) -->
-        <img src="assets/img/rayons/charcuterie.svg" alt="Charcuterie" loading="lazy" width="1400" height="1400">
-        <div class="rayon__txt"><h3>Charcuterie</h3><p>Jambons, saucissons, pâtés.</p></div>
-      </article>
-      <article class="rayon reveal">
-        <!-- PLACEHOLDER PHOTO : crèmerie, beurre / œufs / yaourts (1400x1400) -->
-        <img src="assets/img/rayons/cremerie.svg" alt="Crèmerie" loading="lazy" width="1400" height="1400">
-        <div class="rayon__txt"><h3>Crèmerie</h3><p>Beurre, œufs, produits laitiers.</p></div>
-      </article>
-      <article class="rayon reveal">
-        <!-- PLACEHOLDER PHOTO : rayon vin (1400x1400) -->
-        <img src="assets/img/rayons/vin.svg" alt="Cave à vin" loading="lazy" width="1400" height="1400">
-        <div class="rayon__txt"><h3>Vin</h3><p>Une cave courte et bien choisie.</p></div>
-      </article>
-      <article class="rayon reveal">
-        <!-- PLACEHOLDER PHOTO : pain du jour (1400x1400) -->
-        <img src="assets/img/rayons/pain.svg" alt="Pain" loading="lazy" width="1400" height="1400">
-        <div class="rayon__txt"><h3>Pain</h3><p>Frais, tous les jours.</p></div>
-      </article>
-      <article class="rayon reveal">
-        <!-- PLACEHOLDER PHOTO : épicerie, rayons de conserves / secs (1400x1400) -->
-        <img src="assets/img/rayons/epicerie.svg" alt="Épicerie" loading="lazy" width="1400" height="1400">
-        <div class="rayon__txt"><h3>Épicerie</h3><p>De quoi compléter le panier.</p></div>
-      </article>
+    <div class="sec-foot reveal">
+      <a class="btn btn--solid btn--lg" href="nos-produits.html">Voir tous nos rayons</a>
     </div>
   </div>
 </section>
 
-<!-- ============ LA FERME ============ -->
-<section class="section section--ferme" id="ferme">
+<section class="section">
   <div class="shell ferme__grid">
     <div class="ferme__media reveal">
-      <!-- PLACEHOLDER PHOTO : le ou les exploitants au champ / en activité (portrait, 1200x1600) -->
-      <img src="assets/img/ferme/portrait.svg" alt="L'équipe de la Ferme Deth Bosc" loading="lazy" width="1200" height="1600">
+      <img src="assets/img/ferme/portrait.svg" alt="L’équipe de la Ferme Deth Bosc" loading="lazy" width="1200" height="1600">
       <figure class="ferme__inset">
-        <!-- PLACEHOLDER PHOTO : détail (mains, cagette, terre, récolte) 900x900 -->
         <img src="assets/img/ferme/detail.svg" alt="Récolte de légumes" loading="lazy" width="900" height="900">
       </figure>
     </div>
     <div class="ferme__txt">
       <p class="eyebrow reveal">Notre histoire</p>
-      <h2 class="sec-title reveal">Du champ <span class="ital">à l'étal</span></h2>
-      <div class="prose reveal" data-needs="histoire">
-        <p>La Ferme Deth Bosc, c'est la rencontre de deux métiers&nbsp;: une exploitation agricole spécialisée dans la culture de légumes, et une société de commerce de type primeur.</p>
-        <p>Cette double casquette change tout. Nous connaissons le temps qu'il faut pour faire pousser une salade, alors nous savons reconnaître un bon produit quand nous en achetons un. Et parce qu'une partie de ce que nous vendons vient de nos propres terres, nous pouvons tenir des prix que peu tiennent.</p>
-        <p>Notre clientèle, c'est celle de tous les jours. Des familles, des habitués, des gens qui veulent bien manger sans y laisser leur budget. C'est pour eux que nous travaillons.</p>
+      <h2 class="sec-title reveal">Du champ <span class="ital">à l’étal</span></h2>
+      <div class="prose reveal">
+        <p>La Ferme Deth Bosc, c’est la rencontre de deux métiers : une exploitation agricole spécialisée dans la culture de légumes, et une société de commerce de type primeur.</p>
+        <p>Cette double casquette change tout. Nous connaissons le temps qu’il faut pour faire pousser une salade, alors nous savons reconnaître un bon produit quand nous en achetons un.</p>
       </div>
       <div class="stats reveal">
         <div class="stat"><span class="stat__n">2</span><span class="stat__l">points de vente</span></div>
         <div class="stat"><span class="stat__n">3</span><span class="stat__l">marchés par semaine</span></div>
         <div class="stat"><span class="stat__n">7j/7</span><span class="stat__l">à votre service</span></div>
       </div>
+      <p class="reveal" style="margin-top:2em">
+        <a class="btn btn--ghost" href="la-ferme.html">Découvrir la ferme</a>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ============ PROFESSIONNELS ============ -->
-<section class="section section--pros" id="pros">
-  <div class="shell">
-    <header class="sec-head sec-head--light reveal">
+<section class="band">
+  <div class="shell band__inner">
+    <div class="reveal">
       <p class="eyebrow">Professionnels</p>
       <h2 class="sec-title">Restaurateurs, collectivités, <span class="ital">revendeurs</span></h2>
-      <p class="sec-lead">Nous approvisionnons les professionnels des Hautes-Pyrénées en demi-gros, avec la même exigence qu'en magasin.</p>
-    </header>
-
-    <div class="pros__grid">
-      <article class="pro-card reveal">
-        <span class="tag">Disponible</span>
-        <h3>Demi-gros fruits &amp; légumes</h3>
-        <p>Des volumes adaptés à votre activité, une sélection quotidienne et des tarifs négociés. Nous nous adaptons à vos besoins et à votre fréquence de commande.</p>
-      </article>
-      <article class="pro-card pro-card--feature reveal">
-        <span class="tag">En développement</span>
-        <h3>Pomme de terre en gros</h3>
-        <p>Nous développons actuellement une offre de vente en gros de pomme de terre. Contactez-nous pour connaître les volumes disponibles et discuter d'un partenariat.</p>
-      </article>
-      <article class="pro-card reveal">
-        <span class="tag">Bientôt</span>
-        <h3>Plateaux &amp; corbeilles événement</h3>
-        <p>Corbeilles de fruits et plateaux de fromage pour vos événements, séminaires et réceptions. Particuliers et professionnels. Offre en cours de lancement, parlons-en dès maintenant.</p>
-      </article>
+      <p class="sec-lead">Demi-gros en fruits et légumes, vente en gros de pomme de terre, plateaux et corbeilles pour vos événements.</p>
     </div>
-
-    <div class="pros__cta reveal">
-      <p>Un besoin régulier, un devis, une question sur les volumes&nbsp;?</p>
-      <a class="btn btn--solid btn--lg" href="#contact">Demander un devis</a>
+    <div class="band__cta reveal">
+      <a class="btn btn--solid btn--lg" href="professionnels.html">Voir notre offre pro</a>
     </div>
-  </div>
-</section>
-
-<!-- ============ GALERIE / VIDÉO ============ -->
-<section class="section section--galerie" id="galerie">
-  <div class="shell">
-    <header class="sec-head reveal">
-      <p class="eyebrow">En images</p>
-      <h2 class="sec-title">La maison, <span class="ital">au quotidien</span></h2>
-    </header>
-
-    <div class="gallery">
-      <figure class="gal gal--video reveal">
-        <!-- PLACEHOLDER VIDÉO : remplacer par assets/video/ferme.mp4 + poster
-             <video src="assets/video/ferme.mp4" poster="assets/img/ferme/video-poster.jpg" muted loop playsinline autoplay></video> -->
-        <img src="assets/img/ferme/video-poster.svg" alt="Vidéo de présentation de la Ferme Deth Bosc" loading="lazy" width="1600" height="900">
-        <span class="gal__play" aria-hidden="true"></span>
-      </figure>
-      <figure class="gal reveal"><img src="assets/img/ferme/gal-1.svg" alt="" loading="lazy" width="1000" height="1250"></figure>
-      <figure class="gal reveal"><img src="assets/img/ferme/gal-2.svg" alt="" loading="lazy" width="1000" height="1250"></figure>
-      <figure class="gal reveal"><img src="assets/img/ferme/gal-3.svg" alt="" loading="lazy" width="1000" height="1250"></figure>
-      <figure class="gal reveal"><img src="assets/img/ferme/gal-4.svg" alt="" loading="lazy" width="1000" height="1250"></figure>
-    </div>
-
-    <div class="socials reveal" data-needs="reseaux-sociaux">
-      <p class="socials__label">Suivez nos arrivages au jour le jour</p>
-      <div class="socials__links">
-        <a class="social" href="#" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5h1.65V4.6A22 22 0 0 0 14.3 4.5c-2.4 0-4 1.45-4 4.1v2.3H7.6V14h2.7v8z"/></svg>
-          <span>Facebook</span>
-        </a>
-        <a class="social" href="#" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9s.68.82.9 1.38c.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38s-.82.68-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9s-.68-.82-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38s.82-.68 1.38-.9c.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2m0 3.05A6.75 6.75 0 1 0 18.75 12 6.75 6.75 0 0 0 12 5.25m0 11.13A4.38 4.38 0 1 1 16.38 12 4.38 4.38 0 0 1 12 16.38m6.97-11.4a1.58 1.58 0 1 0 1.58 1.57 1.58 1.58 0 0 0-1.58-1.57"/></svg>
-          <span>Instagram</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="section section--contact" id="contact">
-  <div class="shell contact__grid">
-    <div class="contact__txt">
-      <p class="eyebrow reveal">Contact</p>
-      <h2 class="sec-title reveal">Une question&nbsp;? <span class="ital">Écrivez-nous</span></h2>
-      <p class="sec-lead reveal">Pour un devis professionnel, une commande de plateau ou simplement savoir si le produit que vous cherchez est arrivé.</p>
-
-      <ul class="contact__list reveal">
-        <li data-needs="telephone">
-          <span class="contact__lab">Téléphone</span>
-          <a href="tel:+33500000000">05 00 00 00 00</a>
-        </li>
-        <li data-needs="email">
-          <span class="contact__lab">E-mail</span>
-          <a href="mailto:contact@fermedethbosc.fr">contact@fermedethbosc.fr</a>
-        </li>
-        <li>
-          <span class="contact__lab">Adresse</span>
-          <span>6 ter route de Rabastens<br>65800 Orleix</span>
-        </li>
-      </ul>
-    </div>
-
-    <form class="contact__form reveal" id="contact-form" action="#" method="post" data-needs="formulaire-backend">
-      <div class="field">
-        <label for="f-nom">Nom</label>
-        <input id="f-nom" name="nom" type="text" autocomplete="name" required>
-      </div>
-      <div class="field-row">
-        <div class="field">
-          <label for="f-mail">E-mail</label>
-          <input id="f-mail" name="email" type="email" autocomplete="email" required>
-        </div>
-        <div class="field">
-          <label for="f-tel">Téléphone</label>
-          <input id="f-tel" name="tel" type="tel" autocomplete="tel">
-        </div>
-      </div>
-      <div class="field">
-        <label for="f-sujet">Votre demande</label>
-        <select id="f-sujet" name="sujet">
-          <option>Question générale</option>
-          <option>Devis professionnel : demi-gros</option>
-          <option>Pomme de terre en gros</option>
-          <option>Plateau / corbeille pour un événement</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="f-msg">Message</label>
-        <textarea id="f-msg" name="message" rows="5" required></textarea>
-      </div>
-      <button class="btn btn--solid btn--lg btn--full" type="submit">Envoyer</button>
-      <p class="form__note">Réponse sous 48&nbsp;h ouvrées.</p>
-    </form>
-  </div>
-
-  <div class="map reveal">
-    <iframe
-      title="Carte des Halles de la Ferme Deth Bosc à Orleix"
-      src="https://www.google.com/maps?q=6+ter+route+de+Rabastens+65800+Orleix&output=embed"
-      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </section>
 
 </main>
-
-<!-- ============ FOOTER ============ -->
-<footer class="site-footer">
-  <div class="shell footer__grid">
-    <div class="footer__brand">
-      <img src="assets/img/logo.svg" alt="" width="52" height="52">
-      <p class="footer__name">La Ferme Deth Bosc</p>
-      <p class="footer__tag">Producteur de légumes &amp; primeur<br>Orleix · Tarbes · Hautes-Pyrénées</p>
-    </div>
-    <nav class="footer__col" aria-label="Points de vente">
-      <h3>Points de vente</h3>
-      <a href="#orleix">Les Halles d’Orleix</a>
-      <a href="#brauhauban">Halle Brauhauban à Tarbes</a>
-      <a href="#marches">Marchés</a>
-    </nav>
-    <nav class="footer__col" aria-label="Informations">
-      <h3>Informations</h3>
-      <a href="#rayons">Nos rayons</a>
-      <a href="#ferme">La ferme</a>
-      <a href="#pros">Professionnels</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="footer__col">
-      <h3>Nous suivre</h3>
-      <a href="#" target="_blank" rel="noopener" data-needs="reseaux-sociaux">Facebook</a>
-      <a href="#" target="_blank" rel="noopener" data-needs="reseaux-sociaux">Instagram</a>
-      <a href="tel:+33500000000" data-needs="telephone">05 00 00 00 00</a>
-    </div>
-  </div>
-  <div class="shell footer__bottom">
-    <p>© <span id="year">2026</span> La Ferme Deth Bosc. Tous droits réservés.</p>
-    <p><a href="mentions-legales.html">Mentions légales</a> · Site réalisé par <a href="https://cazacomm.fr" target="_blank" rel="noopener">Caza Comm</a></p>
-  </div>
-</footer>
 
 <script type="application/ld+json">
 {
@@ -502,7 +273,6 @@
   "@type": "GroceryStore",
   "name": "La Ferme Deth Bosc",
   "description": "Exploitation agricole spécialisée dans la culture de légumes et commerce de primeur. Vente au détail de fruits et légumes, fromage à la coupe, charcuterie, crèmerie, vin, pain et épicerie.",
-  "image": "assets/img/og-image.svg",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "6 ter route de Rabastens",
@@ -523,7 +293,43 @@
 }
 </script>
 
-<script src="assets/js/hero-media.js" defer></script>
+<!-- ===================================================================
+     PIED DE PAGE COMMUN : identique sur toutes les pages.
+     =================================================================== -->
+<footer class="site-footer">
+  <div class="shell footer__grid">
+    <div class="footer__brand">
+      <img src="assets/img/logo.svg" alt="" width="52" height="52">
+      <p class="footer__name">La Ferme Deth Bosc</p>
+      <p class="footer__tag">Producteur de légumes et primeur<br>Orleix · Tarbes · Hautes-Pyrénées</p>
+    </div>
+    <nav class="footer__col" aria-label="Nous trouver">
+      <h3>Nous trouver</h3>
+      <a href="points-de-vente.html">Les Halles d’Orleix</a>
+      <a href="points-de-vente.html#brauhauban">Halle Brauhauban</a>
+      <a href="marches.html">Nos marchés</a>
+    </nav>
+    <nav class="footer__col" aria-label="Informations">
+      <h3>Informations</h3>
+      <a href="nos-produits.html">Nos produits</a>
+      <a href="la-ferme.html">La ferme</a>
+      <a href="professionnels.html">Professionnels</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer__col">
+      <h3>Nous suivre</h3>
+      <a href="#" target="_blank" rel="noopener" data-needs="reseaux-sociaux">Facebook</a>
+      <a href="#" target="_blank" rel="noopener" data-needs="reseaux-sociaux">Instagram</a>
+      <a href="tel:+33500000000" data-needs="telephone">05 00 00 00 00</a>
+    </div>
+  </div>
+  <div class="shell footer__bottom">
+    <p>© <span id="year">2026</span> La Ferme Deth Bosc. Tous droits réservés.</p>
+    <p><a href="mentions-legales.html">Mentions légales</a> · Site réalisé par <a href="https://cazacomm.fr" target="_blank" rel="noopener">Caza Comm</a></p>
+  </div>
+</footer>
+
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/hero-media.js" defer></script>
 </body>
 </html>

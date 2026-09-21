@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Points de vente : magasin d’Orleix et halle Brauhauban | La Ferme Deth Bosc</title>
+<meta name="description" content="Les Halles de la Ferme Deth Bosc à Orleix, ouvertes 7j/7, et notre étal sous la halle Brauhauban à Tarbes. Horaires, adresses et itinéraires.">
+<link rel="canonical" href="https://cazacomm.github.io/ferme-deth-bosc/points-de-vente.html">
+<meta name="theme-color" content="#1F3D2B">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="La Ferme Deth Bosc">
+<meta property="og:title" content="Points de vente : magasin d’Orleix et halle Brauhauban | La Ferme Deth Bosc">
+<meta property="og:description" content="Les Halles de la Ferme Deth Bosc à Orleix, ouvertes 7j/7, et notre étal sous la halle Brauhauban à Tarbes. Horaires, adresses et itinéraires.">
+<meta property="og:url" content="https://cazacomm.github.io/ferme-deth-bosc/points-de-vente.html">
+<meta property="og:image" content="https://cazacomm.github.io/ferme-deth-bosc/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/logo.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page">
+
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<!-- ===================================================================
+     EN-TÊTE COMMUN : identique sur toutes les pages.
+     Toute modification ici doit être répercutée sur chaque fichier .html
+     =================================================================== -->
+<header class="site-header" id="header">
+  <div class="shell header-inner">
+    <a class="brand" href="index.html" aria-label="La Ferme Deth Bosc, retour à l’accueil">
+      <img src="assets/img/logo.svg" alt="" class="brand__mark" width="44" height="44">
+      <span class="brand__text">
+        <span class="brand__line1">La Ferme</span>
+        <span class="brand__line2">Deth Bosc</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="points-de-vente.html" class="is-active" aria-current="page">Points de vente</a>
+      <a href="marches.html">Marchés</a>
+      <a href="nos-produits.html">Nos produits</a>
+      <a href="la-ferme.html">La ferme</a>
+      <a href="professionnels.html">Professionnels</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="btn btn--sm btn--solid header-cta" href="tel:+33500000000" data-needs="telephone">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="ico"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+      <span>Appeler</span>
+    </a>
+
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">
+      <span class="burger__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="burger__label">Menu</span>
+    </button>
+  </div>
+</header>
+<main id="contenu">
+<header class="page-hero">
+  <div class="page-hero__media" aria-hidden="true">
+    <img src="assets/img/hero/hero-1.svg" alt="" width="2400" height="1350" fetchpriority="high">
+  </div>
+  <div class="page-hero__veil" aria-hidden="true"></div>
+  <div class="shell page-hero__inner">
+    <nav class="crumb" aria-label="Fil d’Ariane">
+      <a href="index.html">Accueil</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Points de vente</span>
+    </nav>
+    <h1 class="page-hero__title">Deux adresses, <span class="ital">tous les jours</span></h1>
+    <p class="page-hero__lead">Un magasin complet à Orleix, un étal de fruits et légumes au cœur de Tarbes. Les horaires ci-dessous sont à jour en permanence.</p>
+  </div>
+</header>
+
+<section class="today" id="aujourdhui" aria-labelledby="today-title">
+  <div class="shell">
+    <div class="today__head">
+      <h2 id="today-title" class="today__title">
+        <span class="pulse" aria-hidden="true"></span>
+        Aujourd’hui, <span id="today-date"></span>
+      </h2>
+      <p class="today__sub">Nos points de vente ouverts en ce moment</p>
+    </div>
+    <div class="today__grid" id="today-grid"></div>
+  </div>
+</section>
+
+<section class="section section--shops">
+  <div class="shell">
+    <div class="shops">
+
+      <article class="shop reveal" id="orleix">
+        <div class="shop__media">
+          <img src="assets/img/points-de-vente/orleix-1.svg" alt="Les Halles de la Ferme Deth Bosc à Orleix" loading="lazy" width="1600" height="1200">
+          <span class="shop__badge" data-open-badge="orleix"></span>
+        </div>
+        <div class="shop__body">
+          <p class="shop__kicker">Point de vente principal</p>
+          <h2 class="shop__name">Les Halles de la<br>Ferme Deth Bosc</h2>
+          <p class="shop__addr">
+            <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7m0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5"/></svg>
+            6 ter route de Rabastens<br>65800 Orleix
+          </p>
+
+          <ul class="shop__tags">
+            <li>Fruits &amp; légumes</li>
+            <li>Fromage à la coupe</li>
+            <li>Charcuterie</li>
+            <li>Crèmerie</li>
+            <li>Vin</li>
+            <li>Pain</li>
+            <li>Épicerie</li>
+          </ul>
+
+          <table class="hours" data-hours="orleix">
+            <caption class="sr-only">Horaires d’ouverture</caption>
+            <tbody></tbody>
+          </table>
+
+          <div class="shop__actions">
+            <a class="btn btn--solid" href="https://www.google.com/maps/search/?api=1&query=6+ter+route+de+Rabastens+65800+Orleix" target="_blank" rel="noopener">Itinéraire</a>
+            <a class="btn btn--ghost" href="tel:+33500000000" data-needs="telephone">Appeler le magasin</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="shop shop--alt reveal" id="brauhauban">
+        <div class="shop__media">
+          <img src="assets/img/points-de-vente/brauhauban-1.svg" alt="L’étal de la Ferme Deth Bosc sous la halle Brauhauban à Tarbes" loading="lazy" width="1600" height="1200">
+          <span class="shop__badge" data-open-badge="brauhauban"></span>
+        </div>
+        <div class="shop__body">
+          <p class="shop__kicker">Au cœur de Tarbes</p>
+          <h2 class="shop__name">L’étal sous la<br>halle Brauhauban</h2>
+          <p class="shop__addr">
+            <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7m0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5"/></svg>
+            Halles Brauhauban<br>65000 Tarbes
+          </p>
+
+          <ul class="shop__tags">
+            <li>Fruits &amp; légumes</li>
+          </ul>
+
+          <table class="hours" data-hours="brauhauban">
+            <caption class="sr-only">Horaires d’ouverture</caption>
+            <tbody></tbody>
+          </table>
+
+          <div class="shop__actions">
+            <a class="btn btn--solid" href="https://www.google.com/maps/search/?api=1&query=Halles+Brauhauban+Tarbes" target="_blank" rel="noopener">Itinéraire</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band band--soft">
+  <div class="shell band__inner">
+    <div class="reveal">
+      <p class="eyebrow">Et aussi</p>
+      <h2 class="sec-title">Nous venons <span class="ital">jusqu’à vous</span></h2>
+      <p class="sec-lead">Trois matins par semaine, nous montons l’étal sur les marchés de Luz-Saint-Sauveur, Argelès-Gazost et Marcadieu.</p>
+    </div>
+    <div class="band__cta reveal">
+      <a class="btn btn--solid btn--lg" href="marches.html">Voir nos marchés</a>
+    </div>
+  </div>
+</section>
+
+<div class="map reveal">
+  <iframe
+    title="Carte des Halles de la Ferme Deth Bosc à Orleix"
+    src="https://www.google.com/maps?q=6+ter+route+de+Rabastens+65800+Orleix&output=embed"
+    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+</main>
+
+<!-- ===================================================================
+     PIED DE PAGE COMMUN : identique sur toutes les pages.
+     =================================================================== -->
+<footer class="site-footer">
+  <div class="shell footer__grid">
+    <div class="footer__brand">
+      <img src="assets/img/logo.svg" alt="" width="52" height="52">
+      <p class="footer__name">La Ferme Deth Bosc</p>
+      <p class="footer__tag">Producteur de légumes et primeur<br>Orleix · Tarbes · Hautes-Pyrénées</p>
+    </div>
+    <nav class="footer__col" aria-label="Nous trouver">
+      <h3>Nous trouver</h3>
+      <a href="points-de-vente.html">Les Halles d’Orleix</a>
+      <a href="points-de-vente.html#brauhauban">Halle Brauhauban</a>
+      <a href="marches.html">Nos marchés</a>
+    </nav>
+    <nav class="footer__col" aria-label="Informations">
+      <h3>Informations</h3>
+      <a href="nos-produits.html">Nos produits</a>
+      <a href="la-ferme.html">La ferme</a>
+      <a href="professionnels.html">Professionnels</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer__col">
+      <h3>Nous suivre</h3>
+      <a href="#" target="_blank" rel="noopener" data-needs="reseaux-sociaux">Facebook</a>
+      <a href="#" target="_blank" rel="noopener" data-needs="reseaux-sociaux">Instagram</a>
+      <a href="tel:+33500000000" data-needs="telephone">05 00 00 00 00</a>
+    </div>
+  </div>
+  <div class="shell footer__bottom">
+    <p>© <span id="year">2026</span> La Ferme Deth Bosc. Tous droits réservés.</p>
+    <p><a href="mentions-legales.html">Mentions légales</a> · Site réalisé par <a href="https://cazacomm.fr" target="_blank" rel="noopener">Caza Comm</a></p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
