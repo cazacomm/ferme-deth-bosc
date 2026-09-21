@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La Ferme Deth Bosc — Primeur & producteur de légumes à Orleix et Tarbes</title>
+<title>La Ferme Deth Bosc, primeur et producteur de légumes à Orleix et Tarbes</title>
 <meta name="description" content="Producteur de légumes et primeur dans les Hautes-Pyrénées. Fruits et légumes, fromage à la coupe, charcuterie, crèmerie, vin, pain et épicerie. Magasin à Orleix, étal aux Halles Brauhauban à Tarbes et sur les marchés de Luz, Argelès-Gazost et Marcadieu.">
 <link rel="canonical" href="https://www.fermedethbosc.fr/">
 <meta name="theme-color" content="#1F3D2B">
@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="La Ferme Deth Bosc">
-<meta property="og:title" content="La Ferme Deth Bosc — Primeur & producteur de légumes">
+<meta property="og:title" content="La Ferme Deth Bosc, primeur et producteur de légumes">
 <meta property="og:description" content="Le meilleur rapport qualité-prix des Hautes-Pyrénées. Magasin à Orleix, étal aux Halles Brauhauban, présents sur les marchés.">
 <meta property="og:image" content="assets/img/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,9 +24,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 
-<script type="importmap">
-{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js" } }
-</script>
 </head>
 <body>
 
@@ -35,7 +32,7 @@
 <!-- ============ HEADER ============ -->
 <header class="site-header" id="header">
   <div class="shell header-inner">
-    <a class="brand" href="#top" aria-label="La Ferme Deth Bosc — accueil">
+    <a class="brand" href="#top" aria-label="La Ferme Deth Bosc, accueil">
       <!-- PLACEHOLDER LOGO : remplacer par le logo client (SVG de préférence) -->
       <img src="assets/img/logo.svg" alt="" class="brand__mark" width="44" height="44">
       <span class="brand__text">
@@ -68,7 +65,29 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+  <!-- ===== FOND DU HERO : diaporama photo / vidéo =====
+       Chaque .hero__slide accepte une <img> OU une <video>.
+       Pour passer une diapo en vidéo, remplacer l'<img> par :
+       <video src="assets/video/ferme.mp4" poster="assets/img/hero/hero-1.jpg"
+              muted loop playsinline preload="metadata"></video>
+       Les vidéos rendent la main au diaporama quand elles se terminent.
+  -->
+  <div class="hero__media" id="hero-media" aria-hidden="true">
+    <figure class="hero__slide is-active">
+      <img src="assets/img/hero/hero-1.svg" alt="" width="2400" height="1350" fetchpriority="high">
+    </figure>
+    <figure class="hero__slide">
+      <img src="assets/img/hero/hero-2.svg" alt="" width="2400" height="1350" loading="lazy">
+    </figure>
+    <figure class="hero__slide">
+      <img src="assets/img/hero/hero-3.svg" alt="" width="2400" height="1350" loading="lazy">
+    </figure>
+    <figure class="hero__slide">
+      <img src="assets/img/hero/hero-4.svg" alt="" width="2400" height="1350" loading="lazy">
+    </figure>
+  </div>
+
   <div class="hero__veil" aria-hidden="true"></div>
 
   <div class="shell hero__inner">
@@ -79,7 +98,7 @@
     </h1>
     <p class="hero__lead reveal">
       Producteur de légumes <em>et</em> primeur. Nous cultivons, nous choisissons,
-      nous vendons&nbsp;— sans intermédiaire inutile. Le meilleur rapport qualité-prix
+      nous vendons, sans intermédiaire inutile. Le meilleur rapport qualité-prix
       des Hautes-Pyrénées, sept jours sur sept.
     </p>
     <div class="hero__cta reveal">
@@ -87,8 +106,6 @@
       <a class="btn btn--ghost btn--lg" href="#rayons">Découvrir nos rayons</a>
     </div>
   </div>
-
-  <div class="hero__scroll" aria-hidden="true"><span></span></div>
 </section>
 
 <!-- ============ BANDEAU OUVERT AUJOURD'HUI ============ -->
@@ -97,7 +114,7 @@
     <div class="today__head">
       <h2 id="today-title" class="today__title">
         <span class="pulse" aria-hidden="true"></span>
-        Aujourd'hui, <span id="today-date">—</span>
+        Aujourd'hui, <span id="today-date"></span>
       </h2>
       <p class="today__sub">Nos points de vente ouverts en ce moment</p>
     </div>
@@ -144,7 +161,7 @@
         <div class="shop__media">
           <!-- PLACEHOLDER PHOTO : façade / intérieur du magasin d'Orleix (paysage, 1600x1200) -->
           <img src="assets/img/points-de-vente/orleix-1.svg" alt="Les Halles de la Ferme Deth Bosc à Orleix" loading="lazy" width="1600" height="1200">
-          <span class="shop__badge" data-open-badge="orleix">—</span>
+          <span class="shop__badge" data-open-badge="orleix"></span>
         </div>
         <div class="shop__body">
           <p class="shop__kicker">Point de vente principal</p>
@@ -181,7 +198,7 @@
         <div class="shop__media">
           <!-- PLACEHOLDER PHOTO : l'étal sous la halle Brauhauban (paysage, 1600x1200) -->
           <img src="assets/img/points-de-vente/brauhauban-1.svg" alt="L'étal de la Ferme Deth Bosc sous la halle Brauhauban à Tarbes" loading="lazy" width="1600" height="1200">
-          <span class="shop__badge" data-open-badge="brauhauban">—</span>
+          <span class="shop__badge" data-open-badge="brauhauban"></span>
         </div>
         <div class="shop__body">
           <p class="shop__kicker">Au cœur de Tarbes</p>
@@ -216,7 +233,7 @@
     <header class="sec-head reveal">
       <p class="eyebrow">Sur les routes</p>
       <h2 class="sec-title">Nos marchés <span class="ital">de la semaine</span></h2>
-      <p class="sec-lead">Trois matins par semaine, nous chargeons le camion et nous venons à vous — uniquement fruits et légumes.</p>
+      <p class="sec-lead">Trois matins par semaine, nous chargeons le camion et nous venons à vous, avec uniquement des fruits et légumes.</p>
     </header>
 
     <ol class="markets" id="markets-list">
@@ -286,7 +303,7 @@
       <!-- PLACEHOLDER PHOTO : le ou les exploitants au champ / en activité (portrait, 1200x1600) -->
       <img src="assets/img/ferme/portrait.svg" alt="L'équipe de la Ferme Deth Bosc" loading="lazy" width="1200" height="1600">
       <figure class="ferme__inset">
-        <!-- PLACEHOLDER PHOTO : détail — mains, cagette, terre, récolte (900x900) -->
+        <!-- PLACEHOLDER PHOTO : détail (mains, cagette, terre, récolte) 900x900 -->
         <img src="assets/img/ferme/detail.svg" alt="Récolte de légumes" loading="lazy" width="900" height="900">
       </figure>
     </div>
@@ -330,7 +347,7 @@
       <article class="pro-card reveal">
         <span class="tag">Bientôt</span>
         <h3>Plateaux &amp; corbeilles événement</h3>
-        <p>Corbeilles de fruits et plateaux de fromage pour vos événements, séminaires et réceptions. Particuliers et professionnels. Offre en cours de lancement&nbsp;— parlons-en dès maintenant.</p>
+        <p>Corbeilles de fruits et plateaux de fromage pour vos événements, séminaires et réceptions. Particuliers et professionnels. Offre en cours de lancement, parlons-en dès maintenant.</p>
       </article>
     </div>
 
@@ -421,7 +438,7 @@
         <label for="f-sujet">Votre demande</label>
         <select id="f-sujet" name="sujet">
           <option>Question générale</option>
-          <option>Devis professionnel — demi-gros</option>
+          <option>Devis professionnel : demi-gros</option>
           <option>Pomme de terre en gros</option>
           <option>Plateau / corbeille pour un événement</option>
         </select>
@@ -437,7 +454,7 @@
 
   <div class="map reveal">
     <iframe
-      title="Carte — Les Halles de la Ferme Deth Bosc, Orleix"
+      title="Carte des Halles de la Ferme Deth Bosc à Orleix"
       src="https://www.google.com/maps?q=6+ter+route+de+Rabastens+65800+Orleix&output=embed"
       loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
@@ -455,8 +472,8 @@
     </div>
     <nav class="footer__col" aria-label="Points de vente">
       <h3>Points de vente</h3>
-      <a href="#orleix">Les Halles — Orleix</a>
-      <a href="#brauhauban">Halle Brauhauban — Tarbes</a>
+      <a href="#orleix">Les Halles d’Orleix</a>
+      <a href="#brauhauban">Halle Brauhauban à Tarbes</a>
       <a href="#marches">Marchés</a>
     </nav>
     <nav class="footer__col" aria-label="Informations">
@@ -474,7 +491,7 @@
     </div>
   </div>
   <div class="shell footer__bottom">
-    <p>© <span id="year">2026</span> La Ferme Deth Bosc — Tous droits réservés.</p>
+    <p>© <span id="year">2026</span> La Ferme Deth Bosc. Tous droits réservés.</p>
     <p><a href="mentions-legales.html">Mentions légales</a> · Site réalisé par <a href="https://cazacomm.fr" target="_blank" rel="noopener">Caza Comm</a></p>
   </div>
 </footer>
@@ -506,7 +523,7 @@
 }
 </script>
 
-<script type="module" src="assets/js/hero3d.js"></script>
+<script src="assets/js/hero-media.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>

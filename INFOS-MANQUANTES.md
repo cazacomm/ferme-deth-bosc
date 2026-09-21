@@ -15,12 +15,11 @@ ou par un commentaire `PLACEHOLDER`.
 
 ## 🟠 Contenu
 
-- **L'histoire de la ferme** — rédigée à partir du mail reçu, à faire valider et enrichir (depuis quand ? reprise familiale ? surface cultivée ? quels légumes ?) → `data-needs="histoire"`
-- **Les collaborateurs** — demandés dans le mail, pas encore reçus. Prévoir une sous-section « L'équipe » en V2.
-- **Horaires des marchés** — le client indique « matin ». Les horaires affichés (8h–13h) sont une hypothèse **à confirmer** pour Luz-Saint-Sauveur, Argelès-Gazost et Marcadieu.
-- **Adresse exacte de la halle Brauhauban** — numéro de rue / emplacement de l'étal.
-- **Code postal d'Orleix** — le mail indique « 6800 », corrigé en **65800**. À confirmer.
-- **Plateaux & corbeilles** — préciser si l'offre est déjà commandable ou seulement en préparation (le libellé « Bientôt » est en place).
+- **L'histoire de la ferme** : rédigée à partir du mail reçu, à faire valider et enrichir (depuis quand ? reprise familiale ? surface cultivée ? quels légumes ?) → `data-needs="histoire"`
+- **Les collaborateurs** : demandés dans le mail, pas encore reçus. Prévoir une sous-section « L'équipe » en V2.
+- **Horaires des marchés** : le client indique « matin ». Les horaires affichés (8h à 13h) sont une hypothèse **à confirmer** pour Luz-Saint-Sauveur, Argelès-Gazost et Marcadieu.
+- **Adresse exacte de la halle Brauhauban** : numéro de rue / emplacement de l'étal.
+- **Plateaux & corbeilles** : préciser si l'offre est déjà commandable ou seulement en préparation (le libellé « Bientôt » est en place).
 
 ## 🟡 Visuels attendus
 
@@ -28,10 +27,14 @@ Le client a annoncé les photos après le réaménagement du magasin d'Orleix.
 
 | Fichier à remplacer | Sujet | Dimensions mini |
 |---|---|---|
+| `assets/img/hero/hero-1` | **Fond du hero 1** : magasin d'Orleix, plan large | 2400 × 1350 |
+| `assets/img/hero/hero-2` | **Fond du hero 2** : gros plan récolte / cagette | 2400 × 1350 |
+| `assets/img/hero/hero-3` | **Fond du hero 3** : l'étal du marché au petit matin | 2400 × 1350 |
+| `assets/img/hero/hero-4` | **Fond du hero 4** : le champ, les Pyrénées au fond | 2400 × 1350 |
 | `assets/img/points-de-vente/orleix-1` | Magasin d'Orleix, vue large | 1600 × 1200 |
 | `assets/img/points-de-vente/brauhauban-1` | L'étal sous la halle | 1600 × 1200 |
 | `assets/img/marches/marche-panorama` | L'étal sur un marché, panoramique | 2400 × 900 |
-| `assets/img/rayons/fruits-legumes` | **Photo maîtresse** — étal généreux | 2000 × 1400 |
+| `assets/img/rayons/fruits-legumes` | **Photo maîtresse**, étal généreux | 2000 × 1400 |
 | `assets/img/rayons/fromage` | Comptoir fromage | 1400 × 1400 |
 | `assets/img/rayons/charcuterie` | Vitrine charcuterie | 1400 × 1400 |
 | `assets/img/rayons/cremerie` | Crèmerie | 1400 × 1400 |
@@ -46,6 +49,7 @@ Le client a annoncé les photos après le réaménagement du magasin d'Orleix.
 
 ## ⚙️ Technique (V2)
 
+- **Vidéos du hero** : n'importe laquelle des 4 diapos du hero peut recevoir une vidéo à la place d'une photo (voir README). Idéal : 8 à 12 s, muette, 1920 × 1080, moins de 4 Mo.
 - **Formulaire de contact** : aucun backend en V1 (GitHub Pages est statique). Options : Formspree, Web3Forms, ou un simple `mailto:`. → `data-needs="formulaire-backend"`
 - **Nom de domaine** : ajouter le fichier `CNAME` + configuration DNS.
-- **Google Business Profile** : à créer/relier pour les deux points de vente — le plus gros levier SEO local pour ce type de commerce.
+- **Google Business Profile** : à créer/relier pour les deux points de vente : le plus gros levier SEO local pour ce type de commerce.

@@ -1,5 +1,5 @@
 /* =========================================================
-   La Ferme Deth Bosc — main.js
+   La Ferme Deth Bosc / main.js
    Source unique de vérité pour les horaires : DATA ci-dessous.
    Modifier ici met à jour : le bandeau "Aujourd'hui", les badges
    ouvert/fermé et les tableaux d'horaires.
@@ -8,7 +8,7 @@
   'use strict';
 
   /* ---------------------------------------------------------
-     DATA — horaires
+     DATA : horaires
      Clés de jour : 0 = dimanche … 6 = samedi
      Créneaux : [["08:30","13:00"], ["15:00","19:30"]]
      --------------------------------------------------------- */
@@ -17,7 +17,7 @@
   var LOCATIONS = [
     {
       id: 'orleix',
-      name: 'Les Halles — Orleix',
+      name: 'Les Halles d\u2019Orleix',
       short: 'Les Halles de la Ferme Deth Bosc',
       meta: '6 ter route de Rabastens, 65800 Orleix',
       href: '#orleix',
@@ -33,7 +33,7 @@
     },
     {
       id: 'brauhauban',
-      name: 'Halle Brauhauban — Tarbes',
+      name: 'Halle Brauhauban à Tarbes',
       short: "L'étal sous la halle Brauhauban",
       meta: 'Halles Brauhauban, 65000 Tarbes',
       href: '#brauhauban',
@@ -47,7 +47,7 @@
     }
   ];
 
-  /* Marchés — À CONFIRMER : horaires exacts (indiqués "matin" par le client) */
+  /* Marchés : À CONFIRMER : horaires exacts (indiqués "matin" par le client) */
   var MARKETS = [
     { id:'luz',       day:1, place:'Luz-Saint-Sauveur', slot:['08:00','13:00'] },
     { id:'argeles',   day:2, place:'Argelès-Gazost',    slot:['08:00','13:00'] },
@@ -65,7 +65,7 @@
   function slotsLabel(slots) {
     if (!slots || !slots.length) return 'Fermé';
     return slots.map(function (s) {
-      return '<span class="slot">' + fmt(s[0]) + ' – ' + fmt(s[1]) + '</span>';
+      return '<span class="slot">' + fmt(s[0]) + ' à ' + fmt(s[1]) + '</span>';
     }).join('<span class="sep"> · </span>');
   }
 
@@ -122,7 +122,7 @@
         state: st.state,
         label: st.label,
         name: loc.name,
-        meta: slotsLabel(slots) + (st.detail ? ' — ' + st.detail : ''),
+        meta: slotsLabel(slots) + (st.detail ? ' · ' + st.detail : ''),
         href: loc.href,
         cta: 'Voir le point de vente'
       });
@@ -134,7 +134,7 @@
         state: st.state,
         label: st.state === 'open' ? 'Sur le marché' : st.label,
         name: 'Marché de ' + m.place,
-        meta: slotsLabel([m.slot]) + (st.detail ? ' — ' + st.detail : ''),
+        meta: slotsLabel([m.slot]) + (st.detail ? ' · ' + st.detail : ''),
         href: '#marches',
         cta: 'Voir tous les marchés'
       });
