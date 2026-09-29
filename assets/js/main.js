@@ -124,7 +124,7 @@
         name: loc.name,
         meta: slotsLabel(slots) + (st.detail ? ' · ' + st.detail : ''),
         href: loc.href,
-        cta: 'Voir le point de vente'
+        cta: 'Horaires'
       });
     });
 
@@ -136,7 +136,7 @@
         name: 'Marché de ' + m.place,
         meta: slotsLabel([m.slot]) + (st.detail ? ' · ' + st.detail : ''),
         href: '#marches',
-        cta: 'Voir tous les marchés'
+        cta: 'Les marchés'
       });
     });
 
@@ -182,9 +182,7 @@
       var badges = document.querySelectorAll('[data-open-badge="' + loc.id + '"]');
       Array.prototype.forEach.call(badges, function (badge) {
         var st = statusFor(loc.hours[today], nowMin);
-        badge.textContent = st.state === 'open'
-          ? 'Ouvert' + (st.detail ? ' · ' + st.detail.toLowerCase() : '')
-          : (st.detail ? st.label + ' · ' + st.detail.toLowerCase() : st.label);
+        badge.textContent = st.state === 'open' ? 'Ouvert' : st.label;
         badge.classList.toggle('is-open', st.state === 'open');
         badge.classList.toggle('is-closed', st.state !== 'open');
       });
