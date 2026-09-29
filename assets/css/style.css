@@ -848,13 +848,32 @@ section[id], article[id]{ scroll-margin-top:92px; }
 
 .reels{
   position:relative;
-  overflow:hidden;
   padding-inline:var(--gutter);
-  cursor:grab;
-  touch-action:pan-y;           /* le doigt peut toujours faire défiler la page */
   -webkit-user-select:none; user-select:none;
 }
-.reels.is-dragging{ cursor:grabbing; }
+
+/* Ordinateur : la bande glisse, le conteneur ne défile pas */
+.reels--glisse{
+  overflow:hidden;
+  cursor:grab;
+  touch-action:pan-y;
+}
+.reels--glisse.is-dragging{ cursor:grabbing; }
+.reels--glisse .reels__track{ will-change:transform; }
+
+/* Tactile : défilement natif. Aucune transformation sur le conteneur
+   des vidéos, sinon Safari iOS n'en repeint jamais le calque et les
+   vidéos restent bloquées sur leur première image. */
+.reels--scroll{
+  overflow-x:auto; overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  scroll-snap-type:x proximity;
+  scrollbar-width:none;
+  scroll-behavior:auto;
+}
+.reels--scroll::-webkit-scrollbar{ display:none; }
+.reels--scroll .reel{ scroll-snap-align:start; }
+.reels--scroll .reels__track{ transform:none !important; will-change:auto; }
 .reels:focus-visible{ outline:2px solid var(--green-clair); outline-offset:-4px; }
 
 /* Voiles latéraux : un dégradé posé par-dessus, plutôt qu'un masque CSS
@@ -864,13 +883,14 @@ section[id], article[id]{ scroll-margin-top:92px; }
   content:""; position:absolute; top:0; bottom:0; width:clamp(24px,6vw,90px);
   z-index:3; pointer-events:none;
 }
-.reels::before{ left:0;  background:linear-gradient(to right, var(--green), rgba(30,74,51,0)); }
-.reels::after { right:0; background:linear-gradient(to left,  var(--green), rgba(30,74,51,0)); }
+.reels--glisse::before{ left:0;  background:linear-gradient(to right, var(--green), rgba(30,74,51,0)); }
+.reels--glisse::after { right:0; background:linear-gradient(to left,  var(--green), rgba(30,74,51,0)); }
+.reels--scroll::before,
+.reels--scroll::after{ display:none; }
 
 .reels__track{
   display:flex; gap:clamp(12px,1.4vw,18px);
   width:max-content; padding-block:4px;
-  will-change:transform;
 }
 
 .reel{

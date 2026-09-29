@@ -135,13 +135,32 @@ ffmpeg -ss 0.3 -i assets/video/reel-3.mp4 -frames:v 1 \
 Ajouter ou retirer un extrait se fait dans le HTML
 (`<article class="reel">`), il n'y a rien à configurer dans `reels.js`.
 
-### Trois choses à ne pas défaire dans ce bandeau
+### Deux mécaniques, et c'est volontaire
 
-Elles viennent de bugs réels constatés sur iPhone :
+`reels.js` détecte le tactile et bascule entre deux modes. Ce n'est pas
+de la sur-ingénierie, chaque mode répond à un bug constaté sur iPhone.
 
-1. le défilement passe par `transform`, **jamais** par `scrollLeft`. Sur
-   Safari iOS, la couche de défilement inertiel annule les écritures dans
-   `scrollLeft` à chaque frame et le bandeau reste figé ;
+**Ordinateur (`.reels--glisse`)** : la bande glisse en continu avec
+`transform`, le conteneur ne défile pas. Fluide, porté par la carte
+graphique.
+
+**Tactile (`.reels--scroll`)** : défilement natif, avance discrète toutes
+les 3,8 s via `scrollBy({behavior:'smooth'})`. **Aucune transformation
+sur le conteneur des vidéos.** Sur Safari iOS, une `<video>` placée dans
+un élément transformé à chaque frame n'affiche que sa première image :
+la vidéo tourne mais son calque n'est jamais repeint. C'est l'effet
+« image figée ». Le défilement natif supprime le problème et offre le
+glissement au doigt sans avoir à le coder.
+
+Le retour en début de boucle ne se fait que lorsque plus rien n'est en
+mouvement (160 ms après le dernier événement `scroll`), sinon il entre en
+conflit avec l'animation en cours et produit un à-coup.
+
+### Trois autres points à ne pas défaire
+
+1. écrire dans `scrollLeft` à chaque frame ne fonctionne pas sur iOS :
+   la couche de défilement inertiel annule les écritures. D'où le
+   `transform` sur ordinateur et l'avance discrète sur mobile ;
 2. les bords estompés sont des dégradés posés par-dessus, **pas** un
    `mask-image`. Un masque sur un conteneur qui défile fait disparaître
    tout le contenu sur iOS ;
@@ -149,6 +168,10 @@ Elles viennent de bugs réels constatés sur iPhone :
    C'est le script qui lance la lecture, avec un plafond de trois vidéos
    simultanées sur mobile et cinq sur ordinateur. Avec `autoplay`, les
    seize éléments se lancent d'un coup et le téléphone s'écroule.
+
+Filet de sécurité : la première interaction avec la page (toucher, clic
+ou défilement) relance les vidéos qui n'auraient pas démarré, ce qui
+couvre le mode économie d'énergie.
 
 ## Grilles
 
