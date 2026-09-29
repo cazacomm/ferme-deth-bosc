@@ -1,2 +1,8 @@
 .DS_Store
 node_modules/
+
+# Fichiers d'origine fournis par le client : lourds et non nécessaires
+# au site publié. Ils restent en local pour pouvoir régénérer les
+# visuels et les extraits vidéo. Voir README.
+_sources-photos/
+_sources-videos/

@@ -1,55 +1,65 @@
 # Éléments à récupérer auprès du client
 
-Tous les endroits concernés dans le code sont marqués `data-needs="…"`
-ou par un commentaire `PLACEHOLDER`.
+Mis à jour après réception des photos et des vidéos.
+Tous les endroits concernés dans le code sont marqués `data-needs="…"`.
 
 ## 🔴 Bloquant pour la mise en ligne
 
 | Élément | Où | Marqueur |
 |---|---|---|
-| Numéro de téléphone | header, points de vente, contact, footer | `data-needs="telephone"` |
-| Adresse e-mail de contact | section contact, footer | `data-needs="email"` |
-| Liens Facebook / Instagram (URL exactes) | galerie, footer | `data-needs="reseaux-sociaux"` |
+| Numéro de téléphone | en-tête, points de vente, contact, pied de page | `data-needs="telephone"` |
+| Adresse e-mail de contact | contact, professionnels, pied de page | `data-needs="email"` |
+| **URL exactes Facebook et Instagram** | section réseaux sociaux, pied de page, contact | `data-needs="reseaux-sociaux"` |
 | Raison sociale, SIRET, RCS/TVA, responsable de publication | `mentions-legales.html` | `À compléter` |
 | Logo officiel (SVG ou PNG haute définition) | `assets/img/logo.svg` | logo provisoire en place |
 
-## 🟠 Contenu
+Les liens réseaux sociaux sont d'autant plus urgents que le site met
+maintenant en avant une section vidéo qui pointe vers eux.
 
-- **L'histoire de la ferme** : rédigée à partir du mail reçu, à faire valider et enrichir (depuis quand ? reprise familiale ? surface cultivée ? quels légumes ?) → `data-needs="histoire"`
-- **Les collaborateurs** : demandés dans le mail, pas encore reçus. Prévoir une sous-section « L'équipe » en V2.
-- **Horaires des marchés** : le client indique « matin ». Les horaires affichés (8h à 13h) sont une hypothèse **à confirmer** pour Luz-Saint-Sauveur, Argelès-Gazost et Marcadieu.
-- **Adresse exacte de la halle Brauhauban** : numéro de rue / emplacement de l'étal.
-- **Plateaux & corbeilles** : préciser si l'offre est déjà commandable ou seulement en préparation (le libellé « Bientôt » est en place).
+## 🟠 À faire confirmer
 
-## 🟡 Visuels attendus
+Ces points viennent de ce qu'on voit sur les photos du client, pas de son
+mail. Ils sont en ligne mais doivent être validés.
 
-Le client a annoncé les photos après le réaménagement du magasin d'Orleix.
+- **Sandwichs et traiteur** : le comptoir porte la mention « Sandwichs-Traiteur ». Ajouté en rayon et dans la liste des services d'Orleix. → `data-needs="confirmation"`
+- **Dépôt de pain et viennoiserie** : la façade indique « ICI DÉPÔT DE PAIN », le comptoir « Viennoiserie au beurre fin ». Ajouté au rayon Pain.
+- **Oignons de Trébons** : une affiche « Notre production / Oignons de Trébons » est visible en magasin. Rien n'est écrit sur le site à ce sujet, mais si c'est bien une de leurs productions, c'est un argument fort à exploiter (spécialité locale reconnue).
+- **Horaires des marchés** : le client indique « matin ». Les horaires affichés (8h à 13h) sont une hypothèse à confirmer pour Luz-Saint-Sauveur, Argelès-Gazost et Marcadieu.
+- **Adresse exacte de la halle Brauhauban** : emplacement de l'étal dans la halle.
+- **L'histoire de la ferme** : rédigée à partir du mail, à faire valider et enrichir (depuis quand ? reprise familiale ? surface cultivée ? quels légumes ?).
+- **Les collaborateurs** : la photo d'équipe est en ligne, mais sans les prénoms ni les rôles. Une sous-section « L'équipe » est prévue et annoncée comme « bientôt » sur la page La ferme.
 
-| Fichier à remplacer | Sujet | Dimensions mini |
+## 🟡 Visuels encore manquants
+
+Les photos du magasin d'Orleix sont en place. Il manque :
+
+| Sujet | Où c'est utilisé | Actuellement |
 |---|---|---|
-| `assets/img/hero/hero-1` | **Fond du hero 1** : magasin d'Orleix, plan large | 2400 × 1350 |
-| `assets/img/hero/hero-2` | **Fond du hero 2** : gros plan récolte / cagette | 2400 × 1350 |
-| `assets/img/hero/hero-3` | **Fond du hero 3** : l'étal du marché au petit matin | 2400 × 1350 |
-| `assets/img/hero/hero-4` | **Fond du hero 4** : le champ, les Pyrénées au fond | 2400 × 1350 |
-| `assets/img/points-de-vente/orleix-1` | Magasin d'Orleix, vue large | 1600 × 1200 |
-| `assets/img/points-de-vente/brauhauban-1` | L'étal sous la halle | 1600 × 1200 |
-| `assets/img/marches/marche-panorama` | L'étal sur un marché, panoramique | 2400 × 900 |
-| `assets/img/rayons/fruits-legumes` | **Photo maîtresse**, étal généreux | 2000 × 1400 |
-| `assets/img/rayons/fromage` | Comptoir fromage | 1400 × 1400 |
-| `assets/img/rayons/charcuterie` | Vitrine charcuterie | 1400 × 1400 |
-| `assets/img/rayons/cremerie` | Crèmerie | 1400 × 1400 |
-| `assets/img/rayons/vin` | Rayon vin | 1400 × 1400 |
-| `assets/img/rayons/pain` | Pain du jour | 1400 × 1400 |
-| `assets/img/rayons/epicerie` | Épicerie | 1400 × 1400 |
-| `assets/img/ferme/portrait` | Portrait exploitant(s) en activité | 1200 × 1600 |
-| `assets/img/ferme/detail` | Détail : mains, cagette, récolte | 900 × 900 |
-| `assets/img/ferme/gal-1` à `gal-4` | Ambiances | 1000 × 1250 |
-| `assets/img/og-image` | Vignette de partage, **en .jpg** | 1200 × 630 |
-| `assets/video/ferme.mp4` | Vidéo de présentation + image poster | 1920 × 1080 |
+| **L'étal sous la halle Brauhauban** | page Points de vente, carte d'accueil | photo d'une halle couverte, marquée « Photo d'illustration » |
+| **Les trois marchés** (Luz, Argelès, Marcadieu) | page Marchés, carte d'accueil | trois visuels génériques, marqués « Illustration » |
+| Une vue du champ ou de la serre | page La ferme | remplacé par des extraits vidéo |
+
+⚠️ **Droits d'image.** Quatre visuels de marché et de halle ont été
+fournis sous des noms de fichiers du type `images.jpeg`, `image.jpg` :
+ils proviennent vraisemblablement d'une recherche web et leurs droits
+ne sont pas vérifiés. Ils sont marqués « Illustration » sur le site et
+**doivent être remplacés avant toute campagne de communication**. Les
+visuels de produits proviennent de Pixabay (licence libre) et ne posent
+pas de problème.
+
+## 🎬 Vidéos
+
+Huit extraits de 6 s ont été découpés dans les dix vidéos fournies et
+alimentent le bandeau « Retrouvez-nous en vidéo ». Les sources d'origine
+restent disponibles en local dans `_sources-videos/`.
+
+Deux vidéos longues n'ont pas été exploitées en entier et pourraient
+servir en V2 : la visite complète du magasin (2 min) et les témoignages
+clients (1 min), par exemple sur la page La ferme avec un lecteur et du
+son.
 
 ## ⚙️ Technique (V2)
 
-- **Vidéos du hero** : n'importe laquelle des 4 diapos du hero peut recevoir une vidéo à la place d'une photo (voir README). Idéal : 8 à 12 s, muette, 1920 × 1080, moins de 4 Mo.
-- **Formulaire de contact** : aucun backend en V1 (GitHub Pages est statique). Options : Formspree, Web3Forms, ou un simple `mailto:`. → `data-needs="formulaire-backend"`
-- **Nom de domaine** : ajouter le fichier `CNAME` + configuration DNS.
-- **Google Business Profile** : à créer/relier pour les deux points de vente : le plus gros levier SEO local pour ce type de commerce.
+- **Formulaire de contact** : aucun backend en V1, GitHub Pages est statique. Options : Formspree, Web3Forms, ou un simple `mailto:`. → `data-needs="formulaire-backend"`
+- **Nom de domaine** : ajouter le fichier `CNAME` + configuration DNS, puis mettre à jour les balises `canonical`, `og:url`, `robots.txt` et `sitemap.xml` qui pointent aujourd'hui vers l'URL GitHub Pages.
+- **Google Business Profile** : à créer ou relier pour les deux points de vente. C'est le plus gros levier de référencement local pour ce type de commerce.

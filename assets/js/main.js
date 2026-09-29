@@ -17,8 +17,8 @@
   var LOCATIONS = [
     {
       id: 'orleix',
-      name: 'Les Halles d\u2019Orleix',
-      short: 'Les Halles de la Ferme Deth Bosc',
+      name: 'Aux Halles d\u2019Orleix',
+      short: 'Aux Halles de la Ferme Deth Bosc',
       meta: '6 ter route de Rabastens, 65800 Orleix',
       href: '#orleix',
       hours: {
