@@ -303,14 +303,6 @@
     var year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 
-    /* Les formulaires n'ont pas encore de backend (voir INFOS-MANQUANTES.md) */
-    var forms = document.querySelectorAll('form[data-needs="formulaire-backend"]');
-    Array.prototype.forEach.call(forms, function (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        window.alert('Formulaire à connecter (V2). En attendant, appelez-nous ou écrivez-nous directement.');
-      });
-    });
   }
 
   /* ---------------------------------------------------------

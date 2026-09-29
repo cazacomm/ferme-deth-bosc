@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/img/logo.svg">
+<link rel="apple-touch-icon" href="assets/img/favicon.svg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,6 @@
 <header class="site-header" id="header">
   <div class="shell header-inner">
     <a class="brand" href="index.html" aria-label="La Ferme Deth Bosc, retour à l’accueil">
-      <img src="assets/img/logo.svg" alt="" class="brand__mark" width="44" height="44">
       <span class="brand__text">
         <span class="brand__line1">La Ferme</span>
         <span class="brand__line2">Deth Bosc</span>
@@ -52,7 +51,7 @@
       <a href="contact.html" class="is-active" aria-current="page">Contact</a>
     </nav>
 
-    <a class="btn btn--sm btn--solid header-cta" href="tel:+33500000000" data-needs="telephone">
+    <a class="btn btn--sm btn--solid header-cta" href="tel:+33651261773">
       <svg viewBox="0 0 24 24" aria-hidden="true" class="ico"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1z"/></svg>
       <span>Appeler</span>
     </a>
@@ -76,7 +75,7 @@
       <span aria-current="page">Contact</span>
     </nav>
     <h1 class="page-hero__title">Une question&nbsp;? <span class="ital">Écrivez-nous</span></h1>
-    <p class="page-hero__lead">Pour un devis professionnel, une commande de plateau ou simplement savoir si le produit que vous cherchez est arrivé.</p>
+    <p class="page-hero__lead">Pour un devis professionnel, une commande de plateau ou simplement savoir si le produit que vous cherchez est arrivé, le téléphone reste le plus rapide.</p>
   </div>
 </header>
 
@@ -99,62 +98,41 @@
       <p class="eyebrow reveal">Nos coordonnées</p>
       <h2 class="sec-title reveal">Nous joindre</h2>
       <ul class="contact__list reveal">
-        <li data-needs="telephone">
+        <li>
           <span class="contact__lab">Téléphone</span>
-          <a href="tel:+33500000000">05 00 00 00 00</a>
+          <a href="tel:+33651261773">06 51 26 17 73</a>
         </li>
-        <li data-needs="email">
+        <li>
           <span class="contact__lab">E-mail</span>
-          <a href="mailto:contact@fermedethbosc.fr">contact@fermedethbosc.fr</a>
+          <a href="mailto:lafermedethbosc@gmail.com">lafermedethbosc@gmail.com</a>
         </li>
         <li>
           <span class="contact__lab">Adresse</span>
           <span>6 ter route de Rabastens<br>65800 Orleix</span>
         </li>
-        <li data-needs="reseaux-sociaux">
+        <li>
           <span class="contact__lab">Réseaux</span>
-          <span><a href="#" target="_blank" rel="noopener">Facebook</a> · <a href="#" target="_blank" rel="noopener">Instagram</a></span>
+          <span><a href="https://www.facebook.com/laFermeDethBosc/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/lafermedethbosc/" target="_blank" rel="noopener">Instagram</a></span>
         </li>
       </ul>
 
       <div class="notice reveal" style="margin-top:2.6em">
         <h3>Horaires en un coup d’œil</h3>
-        <p>Aux Halles d’Orleix sont ouvertes sept jours sur sept. L’étal de Brauhauban est ouvert du mardi au dimanche, sauf le jeudi.</p>
+        <p>Aux Halles d’Orleix, nous sommes ouverts sept jours sur sept. L’étal de Brauhauban est ouvert du mardi au dimanche, sauf le jeudi.</p>
         <p><a class="btn btn--ghost" href="points-de-vente.html">Voir tous les horaires</a></p>
       </div>
     </div>
 
-    <form class="contact__form reveal" id="ct" action="#" method="post" data-needs="formulaire-backend">
-      <div class="field">
-        <label for="ct-nom">Nom</label>
-        <input id="ct-nom" name="nom" type="text" autocomplete="name" required>
+    <aside class="callcard reveal">
+      <p class="callcard__kicker">Le plus simple</p>
+      <h2 class="callcard__title">Appelez-nous</h2>
+      <p class="callcard__num"><a href="tel:+33651261773">06 51 26 17 73</a></p>
+      <p class="callcard__txt">Nous répondons pendant les heures d’ouverture du magasin d’Orleix. Pour une demande écrite, un e-mail fait très bien l’affaire.</p>
+      <div class="callcard__actions">
+        <a class="btn btn--solid btn--lg" href="tel:+33651261773">Appeler</a>
+        <a class="btn btn--ghost btn--lg" href="mailto:lafermedethbosc@gmail.com">Écrire un e-mail</a>
       </div>
-      <div class="field-row">
-        <div class="field">
-          <label for="ct-mail">E-mail</label>
-          <input id="ct-mail" name="email" type="email" autocomplete="email" required>
-        </div>
-        <div class="field">
-          <label for="ct-tel">Téléphone</label>
-          <input id="ct-tel" name="tel" type="tel" autocomplete="tel">
-        </div>
-      </div>
-      <div class="field">
-        <label for="ct-sujet">Votre demande</label>
-        <select id="ct-sujet" name="sujet">
-          <option>Question générale</option>
-          <option>Devis professionnel : demi-gros</option>
-          <option>Pomme de terre en gros</option>
-          <option>Plateau ou corbeille pour un événement</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="ct-msg">Message</label>
-        <textarea id="ct-msg" name="message" rows="5" required></textarea>
-      </div>
-      <button class="btn btn--solid btn--lg btn--full" type="submit">Envoyer</button>
-      <p class="form__note">Réponse sous 48 h ouvrées.</p>
-    </form>
+    </aside>
 
   </div>
 </section>
@@ -174,7 +152,6 @@
 <footer class="site-footer">
   <div class="shell footer__grid">
     <div class="footer__brand">
-      <img src="assets/img/logo.svg" alt="" width="52" height="52">
       <p class="footer__name">La Ferme Deth Bosc</p>
       <p class="footer__tag">Producteur de légumes et primeur<br>Orleix · Tarbes · Hautes-Pyrénées</p>
     </div>
@@ -193,9 +170,9 @@
     </nav>
     <div class="footer__col">
       <h3>Nous suivre</h3>
-      <a href="#" target="_blank" rel="noopener" data-needs="reseaux-sociaux">Facebook</a>
-      <a href="#" target="_blank" rel="noopener" data-needs="reseaux-sociaux">Instagram</a>
-      <a href="tel:+33500000000" data-needs="telephone">05 00 00 00 00</a>
+      <a href="https://www.facebook.com/laFermeDethBosc/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/lafermedethbosc/" target="_blank" rel="noopener">Instagram</a>
+      <a href="tel:+33651261773">06 51 26 17 73</a>
     </div>
   </div>
   <div class="shell footer__bottom">
