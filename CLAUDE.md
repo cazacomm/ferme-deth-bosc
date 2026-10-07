@@ -20,7 +20,7 @@ qualité-prix.
 successives, le client renvoie ses retours entre chaque.
 
 ### Coordonnées (fournies, en ligne)
-- Téléphone : 06 51 26 17 73
+- Téléphone : 06 98 92 62 86
 - E-mail : lafermedethbosc@gmail.com
 - Facebook : https://www.facebook.com/laFermeDethBosc/
 - Instagram : https://www.instagram.com/lafermedethbosc/
@@ -35,10 +35,13 @@ les photos.
 
 | Jour | Horaires |
 |---|---|
-| Lundi | 15h00 à 19h30 |
-| Mardi à vendredi | 8h30 à 13h00 et 15h00 à 19h30 |
-| Samedi | 8h30 à 19h30 en continu |
+| Lundi | 15h30 à 19h00 |
+| Mardi à vendredi | 8h30 à 13h00 et 15h30 à 19h00 |
+| Samedi | 8h30 à 13h00 et 15h00 à 19h00 |
 | Dimanche | 9h00 à 13h00 |
+
+Horaires changés par le client le 7 octobre 2026. Le samedi n'est plus en
+continu. L'ancien numéro 06 51 26 17 73 a été remplacé le même jour.
 
 **Étal sous la halle Brauhauban**, Tarbes. Mardi, mercredi, vendredi,
 samedi et dimanche de 8h00 à 13h00. Fruits et légumes uniquement.

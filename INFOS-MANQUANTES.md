@@ -5,7 +5,7 @@ des photos de Brauhauban et du marché de Luz.
 
 ## ✅ Réglé
 
-- Téléphone : **06 51 26 17 73**
+- Téléphone : **06 98 92 62 86**
 - E-mail : **lafermedethbosc@gmail.com**
 - Facebook et Instagram : liens en place
 - **Photos de la boutique rénovée d’Orleix** : tout le site est repassé dessus
