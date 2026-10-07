@@ -275,7 +275,29 @@ Le détail et l'état de chaque point sont dans `INFOS-MANQUANTES.md`.
   tous sur le domaine.
 - **Google Business Profile** pour les deux points de vente. C'est le
   plus gros levier de référencement local pour ce type de commerce, à
-  vendre en même temps que le site.
+  vendre en même temps que le site. **Toujours pas fait**, et ça prime
+  sur tout le reste du SEO.
+- **Blog** : demandé par le client, mais plus tard. Prévoir un dossier
+  `blog/` avec une page liste et des articles statiques, à ajouter au
+  `sitemap.xml`. Ne pas le lancer sans un vrai rythme de publication.
+
+### Référencement, état des lieux
+Passage SEO fait le 7 octobre 2026 :
+- titres de 54 à 64 caractères, descriptions de 115 à 160, tous réécrits
+  avec la localité et les termes réellement cherchés (primeur, fruits et
+  légumes, produits frais, fromages, Orleix, Tarbes)
+- données structurées en `@graph` sur l'accueil : deux `GroceryStore`
+  (Orleix et Brauhauban, chacun avec ses horaires), un `WebSite`,
+  `sameAs` vers Facebook et Instagram, `hasMap`, `areaServed`,
+  `hasOfferCatalog` des sept rayons
+- `BreadcrumbList` sur les sept pages intérieures
+- `sitemap.xml` avec `lastmod`, `og:image:alt` partout
+- un seul H1 par page, portant la localité sur les pages commerciales
+
+La balise `meta keywords` n'a **pas** été ajoutée : Google l'ignore
+depuis 2009 et elle peut être lue comme un signal de sur-optimisation.
+Les mots clés sont placés là où ils comptent : titre, H1, H2,
+description, texte, attributs `alt`.
 
 ---
 
@@ -293,6 +315,8 @@ Le détail et l'état de chaque point sont dans `INFOS-MANQUANTES.md`.
 | V1.7 | Photos de la boutique rénovée, de Brauhauban et du marché de Luz |
 | V1.8 | Bandeau vidéo remonté juste sous le bandeau du jour, en-tête allégé |
 | V1.9 | Mise en ligne sur lafermedethbosc.fr |
+| V1.10 | Nouveau numéro et nouveaux horaires d'Orleix |
+| V1.11 | Passage SEO : titres, descriptions, données structurées, fils d'Ariane |
 
 ---
 

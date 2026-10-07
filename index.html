@@ -3,18 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La Ferme Deth Bosc, primeur et producteur de légumes à Orleix et Tarbes</title>
-<meta name="description" content="Producteur de légumes et primeur dans les Hautes-Pyrénées. Magasin à Orleix, étal aux Halles Brauhauban à Tarbes, présents sur les marchés de Luz, Argelès-Gazost et Marcadieu.">
+<title>Primeur fruits et légumes à Orleix et Tarbes | Ferme Deth Bosc</title>
+<meta name="description" content="Producteur de légumes et primeur dans les Hautes-Pyrénées. Fruits et légumes, fromages, produits frais et locaux. Magasin à Orleix ouvert 7j/7 et étal à Tarbes.">
 <link rel="canonical" href="https://lafermedethbosc.fr/">
 <meta name="theme-color" content="#1F3D2B">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="La Ferme Deth Bosc">
-<meta property="og:title" content="La Ferme Deth Bosc, primeur et producteur de légumes à Orleix et Tarbes">
-<meta property="og:description" content="Producteur de légumes et primeur dans les Hautes-Pyrénées. Magasin à Orleix, étal aux Halles Brauhauban à Tarbes, présents sur les marchés de Luz, Argelès-Gazost et Marcadieu.">
+<meta property="og:title" content="Primeur fruits et légumes à Orleix et Tarbes | Ferme Deth Bosc">
+<meta property="og:description" content="Producteur de légumes et primeur dans les Hautes-Pyrénées. Fruits et légumes, fromages, produits frais et locaux. Magasin à Orleix ouvert 7j/7 et étal à Tarbes.">
 <meta property="og:url" content="https://lafermedethbosc.fr/">
 <meta property="og:image" content="https://lafermedethbosc.fr/assets/img/og-image.jpg">
+<meta property="og:image:alt" content="L’étal de fruits et légumes de la Ferme Deth Bosc à Orleix">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -351,28 +352,221 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "GroceryStore",
-  "name": "La Ferme Deth Bosc",
-  "description": "Exploitation agricole spécialisée dans la culture de légumes et commerce de primeur. Vente au détail de fruits et légumes, fromage à la coupe, charcuterie, crèmerie, vin, pain et épicerie.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "6 ter route de Rabastens",
-    "postalCode": "65800",
-    "addressLocality": "Orleix",
-    "addressRegion": "Hautes-Pyrénées",
-    "addressCountry": "FR"
-  },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday",    "opens": "15:30", "closes": "19:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "08:30", "closes": "13:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "15:30", "closes": "19:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday",  "opens": "08:30", "closes": "13:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday",  "opens": "15:00", "closes": "19:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday",    "opens": "09:00", "closes": "13:00" }
-  ],
-  "telephone": "+33698926286",
-  "priceRange": "€",
-  "areaServed": "Hautes-Pyrénées"
+  "@graph": [
+    {
+      "@type": "GroceryStore",
+      "@id": "https://lafermedethbosc.fr/#orleix",
+      "name": "Aux Halles de la Ferme Deth Bosc",
+      "alternateName": "La Ferme Deth Bosc",
+      "description": "Magasin de producteur et primeur à Orleix. Fruits et légumes de saison, fromage à la coupe, charcuterie, crèmerie, vin, pain et épicerie. Ouvert sept jours sur sept.",
+      "url": "https://lafermedethbosc.fr/",
+      "image": [
+        "https://lafermedethbosc.fr/assets/img/points-de-vente/orleix-1.jpg",
+        "https://lafermedethbosc.fr/assets/img/hero/hero-1.jpg",
+        "https://lafermedethbosc.fr/assets/img/rayons/fruits-legumes.jpg"
+      ],
+      "telephone": "+33698926286",
+      "email": "lafermedethbosc@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6 ter route de Rabastens",
+        "postalCode": "65800",
+        "addressLocality": "Orleix",
+        "addressRegion": "Hautes-Pyrénées",
+        "addressCountry": "FR"
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=6+ter+route+de+Rabastens+65800+Orleix",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Monday",
+          "opens": "15:30",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:30",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "15:30",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:30",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "15:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
+      "priceRange": "€",
+      "currenciesAccepted": "EUR",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Orleix"
+        },
+        {
+          "@type": "City",
+          "name": "Tarbes"
+        },
+        {
+          "@type": "City",
+          "name": "Aureilhan"
+        },
+        {
+          "@type": "City",
+          "name": "Bordères-sur-l'Échez"
+        },
+        {
+          "@type": "City",
+          "name": "Séméac"
+        },
+        {
+          "@type": "City",
+          "name": "Soues"
+        },
+        {
+          "@type": "City",
+          "name": "Luz-Saint-Sauveur"
+        },
+        {
+          "@type": "City",
+          "name": "Argelès-Gazost"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hautes-Pyrénées"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/laFermeDethBosc/",
+        "https://www.instagram.com/lafermedethbosc/"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Nos rayons",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Fruits et légumes de saison"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Fromage à la coupe"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Charcuterie"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Crèmerie et œufs plein air"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Vin"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Pain et viennoiserie"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Épicerie"
+          }
+        ]
+      },
+      "makesOffer": {
+        "@type": "Offer",
+        "name": "Demi-gros fruits et légumes pour les professionnels",
+        "url": "https://lafermedethbosc.fr/professionnels.html"
+      }
+    },
+    {
+      "@type": "GroceryStore",
+      "@id": "https://lafermedethbosc.fr/#brauhauban",
+      "name": "La Ferme Deth Bosc, halle Brauhauban",
+      "description": "Étal de fruits et légumes de saison sous la halle Brauhauban, au centre de Tarbes.",
+      "url": "https://lafermedethbosc.fr/points-de-vente.html#brauhauban",
+      "image": [
+        "https://lafermedethbosc.fr/assets/img/points-de-vente/brauhauban-1.jpg"
+      ],
+      "telephone": "+33698926286",
+      "parentOrganization": {
+        "@id": "https://lafermedethbosc.fr/#orleix"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Halle Brauhauban",
+        "postalCode": "65000",
+        "addressLocality": "Tarbes",
+        "addressRegion": "Hautes-Pyrénées",
+        "addressCountry": "FR"
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Halles+Brauhauban+Tarbes",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Tuesday",
+            "Wednesday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "13:00"
+        }
+      ],
+      "priceRange": "€",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Tarbes"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/laFermeDethBosc/",
+        "https://www.instagram.com/lafermedethbosc/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lafermedethbosc.fr/#site",
+      "url": "https://lafermedethbosc.fr/",
+      "name": "La Ferme Deth Bosc",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://lafermedethbosc.fr/#orleix"
+      }
+    }
+  ]
 }
 </script>
 
