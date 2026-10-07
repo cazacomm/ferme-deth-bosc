@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cazacomm.github.io/ferme-deth-bosc/sitemap.xml
+Sitemap: https://lafermedethbosc.fr/sitemap.xml

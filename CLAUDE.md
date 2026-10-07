@@ -3,7 +3,7 @@
 Contexte complet du projet, pour reprendre le travail sans avoir à
 relire l'historique des conversations.
 
-**En ligne :** https://cazacomm.github.io/ferme-deth-bosc/
+**En ligne :** https://lafermedethbosc.fr/
 **Dépôt :** `cazacomm/ferme-deth-bosc` (public, GitHub Pages sur `main`, racine)
 
 ---
@@ -264,9 +264,12 @@ Le détail et l'état de chaque point sont dans `INFOS-MANQUANTES.md`.
   « L'équipe » est annoncée comme « bientôt »).
 
 ### Technique
-- **Nom de domaine** : ajouter `CNAME`, configurer les DNS, puis mettre
-  à jour `canonical`, `og:url`, `robots.txt` et `sitemap.xml` qui
-  pointent vers l'URL GitHub Pages.
+- ~~Nom de domaine~~ : **fait**. `lafermedethbosc.fr` (apex) avec les
+  quatre `A` GitHub Pages et un `CNAME` pour `www`. DNS chez Hostinger
+  (`dns-parking.com`), serveurs de noms inchangés. Le fichier `CNAME` est
+  à la racine du dépôt : **ne pas le supprimer**, GitHub retirerait le
+  domaine. `canonical`, `og:url`, `robots.txt` et `sitemap.xml` pointent
+  tous sur le domaine.
 - **Google Business Profile** pour les deux points de vente. C'est le
   plus gros levier de référencement local pour ce type de commerce, à
   vendre en même temps que le site.
@@ -286,6 +289,7 @@ Le détail et l'état de chaque point sont dans `INFOS-MANQUANTES.md`.
 | V1.6 | Vidéos figées sur iPhone : deux mécaniques de défilement |
 | V1.7 | Photos de la boutique rénovée, de Brauhauban et du marché de Luz |
 | V1.8 | Bandeau vidéo remonté juste sous le bandeau du jour, en-tête allégé |
+| V1.9 | Mise en ligne sur lafermedethbosc.fr |
 
 ---
 
