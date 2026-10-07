@@ -98,11 +98,16 @@ défaire**.
     droits.
 
 ### Réseaux sociaux
-12. Une section **« Retrouvez-nous en vidéo »** avec des extraits courts
+12. Une section **« Retrouvez-nous sur les réseaux sociaux »** avec des extraits courts
     qui défilent lentement en automatique. Le client a lui-même posé la
     question « qu'est-ce qui est le plus fluide ? » : la réponse retenue
     est **des extraits courts, pas les vidéos entières** (les sources
     font 148 Mo, les huit extraits 8 Mo).
+13. **Le bandeau vidéo est placé haut sur l'accueil**, juste après le
+    bandeau vert « Aujourd'hui » et avant les trois engagements. Raison
+    donnée par le client : tout le monde ne descend pas en bas de page,
+    et ces vidéos donnent envie de continuer à faire défiler. Titre seul,
+    sans surtitre ni sous-titre. **Ne pas le redescendre.**
 
 ---
 
@@ -280,6 +285,7 @@ Le détail et l'état de chaque point sont dans `INFOS-MANQUANTES.md`.
 | V1.5 | Correctif mobile du bandeau, design arrondi, textes allégés |
 | V1.6 | Vidéos figées sur iPhone : deux mécaniques de défilement |
 | V1.7 | Photos de la boutique rénovée, de Brauhauban et du marché de Luz |
+| V1.8 | Bandeau vidéo remonté juste sous le bandeau du jour, en-tête allégé |
 
 ---
 
