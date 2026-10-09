@@ -164,32 +164,44 @@ sans redemander les fichiers. Les commandes `sips` et `ffmpeg` sont dans
 le README.
 
 ### Le catalogue des promotions
-Le client produit un catalogue de promos, à l'origine sous forme d'images
-PNG avec sa propre charte (vert sapin, jaune vif, Arial). Consigne de
-Jérémy : garder la structure, refaire la forme aux couleurs et typos du
-site. Le catalogue est donc **reconstruit en HTML**, pas reposté en
-images : seules les photos produits sont extraites des PNG.
+Le client produit lui-même ses visuels de catalogue et les envoie en
+images, avec un petit lecteur HTML autour.
 
-Avantages concrets : un prix se corrige en modifiant du texte, la page
-est lisible sur mobile, elle pèse 500 Ko au lieu de 11 Mo, et elle est
-indexable.
+**L'approche a changé entre deux livraisons, et c'est assumé.**
+Le premier envoi était un test, bâclé : vert sapin, jaune vif, Arial.
+Consigne de Jérémy à ce moment : tout refaire aux couleurs du site. Le
+catalogue avait donc été reconstruit en HTML, en n'extrayant que les
+photos produits.
 
-**Mettre à jour le catalogue** (opération hebdomadaire) :
-1. récupérer les PNG du client dans `_sources-catalogue/`
-2. `python3 outils/extraire-promos.py _sources-catalogue` : le script
-   détecte le cadre vert et le liseré jaune, rogne les bandes noires et
-   écrit directement dans `assets/img/promos/`
-3. vérifier les découpes à l'œil, les photos du client changent de
-   cadrage d'une semaine à l'autre
-4. dans `promotions.html`, mettre à jour les `<article class="promo">` :
-   nom, variété, prix, unité, texte alternatif
-5. mettre à jour les dates à trois endroits : le `<h1>`, le
-   `page-hero__lead`, la `sec-lead` et la couverture `promo__dates`
-6. mettre à jour `lastmod` dans `sitemap.xml`
+Le deuxième envoi (automne 2026) est d'un tout autre niveau : visuels
+complets avec le logo, un titre travaillé, une pastille de prix et trois
+arguments en pied de page. Et surtout le client a écrit : *« on partira
+sur ce type de visuel, qui reprend notre identité visuelle de nos
+réseaux »*. Les reconstruire reviendrait à jeter son identité.
 
-**Quand la promo est terminée**, ne pas laisser la page afficher des
-dates passées. Soit on publie le catalogue suivant, soit on remplace le
-contenu par un message d'attente.
+**Donc aujourd'hui : les visuels du client sont affichés tels quels**,
+dans une liseuse habillée aux couleurs du site. Et pour compenser ce que
+l'image fait perdre, la page porte **en plus une liste des offres en
+texte** : nom, variante et prix. Elle est lisible sans ouvrir les
+visuels, utilisable au lecteur d'écran, et c'est elle que Google indexe.
+
+`outils/extraire-promos.py` reste dans le dépôt : il sert si on revient
+un jour à la reconstruction en HTML.
+
+**Mettre à jour le catalogue** :
+1. déposer le dossier du client dans `_sources-catalogue/<saison>/`
+2. redimensionner les visuels à 880 px de large en WebP qualité 82, vers
+   `assets/img/promos/`, nommés `01-...` à `07-...` dans l'ordre des
+   pages (le client numérote ses fichiers, cet ordre fait foi)
+3. dans `promotions.html` : les `<figure class="promo promo--visuel">`,
+   la liste `<ul class="offres">`, le compteur `1 / N`, le titre, le
+   chapeau et le bloc `ItemList` de données structurées
+4. mettre à jour `lastmod` dans `sitemap.xml`
+
+Le catalogue d'automne n'a **pas de dates de validité**, contrairement au
+test qui annonçait un week-end précis. C'est mieux : rien n'expire tout
+seul. Si un prochain catalogue porte des dates, penser à le remplacer
+quand elles sont passées.
 
 ---
 
@@ -351,6 +363,7 @@ description, texte, attributs `alt`.
 | V1.10 | Nouveau numéro et nouveaux horaires d'Orleix |
 | V1.11 | Passage SEO : titres, descriptions, données structurées, fils d'Ariane |
 | V1.12 | Page promotions : catalogue du client refait aux couleurs du site |
+| V1.13 | Vrais visuels d'automne, liseuse avec pastilles, liste des offres en texte |
 
 ---
 
