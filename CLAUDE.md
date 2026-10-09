@@ -87,8 +87,8 @@ défaire**.
 7. **Verts plus vifs et plus clairs**, repris de leur enseigne.
 8. **Pas de logo inventé.** Le client dit qu'ils n'en ont pas : le nom
    est posé en typographie, avec un filet vert. Aucun symbole dessiné.
-   (Voir section 6 : des photos récentes montrent qu'une identité
-   visuelle existe pourtant.)
+   (Voir section 6 : plusieurs documents du client montrent pourtant un
+   logo bien réel, un macaron rond vert et jaune en lettrage script.)
 
 ### Rejeté explicitement
 9. **La 3D procédurale du hero** (fruits et légumes modélisés) : « on
@@ -119,9 +119,10 @@ défaire**.
 Site **statique**, sans build, sans dépendance, sans CDN. Seules
 ressources externes : les polices Google et la carte Google Maps.
 
-### Les huit pages
+### Les neuf pages
 ```
 index.html               accueil : hero, ouvert aujourd'hui, renvois, vidéos
+promotions.html          catalogue des promos du moment
 points-de-vente.html     Orleix et Brauhauban, horaires, itinéraires
 marches.html             Luz, Argelès-Gazost, Marcadieu
 nos-produits.html        les 7 rayons
@@ -137,6 +138,7 @@ mentions-legales.html
 - `assets/js/hero-media.js` : diaporama du fond du hero, accepte photos
   et vidéos indifféremment.
 - `assets/js/reels.js` : bandeau vidéo des réseaux sociaux.
+- `assets/js/liseuse.js` : feuilletage du catalogue des promotions.
 
 ### Les fonctionnalités qui font le travail commercial
 - **Bandeau « Aujourd'hui »** : calcule en direct où ils sont ouverts
@@ -160,6 +162,34 @@ bas de `index.html`, qui alimente la fiche Google.
 148 Mo). Les garder en local permet de refaire un recadrage ou un extrait
 sans redemander les fichiers. Les commandes `sips` et `ffmpeg` sont dans
 le README.
+
+### Le catalogue des promotions
+Le client produit un catalogue de promos, à l'origine sous forme d'images
+PNG avec sa propre charte (vert sapin, jaune vif, Arial). Consigne de
+Jérémy : garder la structure, refaire la forme aux couleurs et typos du
+site. Le catalogue est donc **reconstruit en HTML**, pas reposté en
+images : seules les photos produits sont extraites des PNG.
+
+Avantages concrets : un prix se corrige en modifiant du texte, la page
+est lisible sur mobile, elle pèse 500 Ko au lieu de 11 Mo, et elle est
+indexable.
+
+**Mettre à jour le catalogue** (opération hebdomadaire) :
+1. récupérer les PNG du client dans `_sources-catalogue/`
+2. `python3 outils/extraire-promos.py _sources-catalogue` : le script
+   détecte le cadre vert et le liseré jaune, rogne les bandes noires et
+   écrit directement dans `assets/img/promos/`
+3. vérifier les découpes à l'œil, les photos du client changent de
+   cadrage d'une semaine à l'autre
+4. dans `promotions.html`, mettre à jour les `<article class="promo">` :
+   nom, variété, prix, unité, texte alternatif
+5. mettre à jour les dates à trois endroits : le `<h1>`, le
+   `page-hero__lead`, la `sec-lead` et la couverture `promo__dates`
+6. mettre à jour `lastmod` dans `sitemap.xml`
+
+**Quand la promo est terminée**, ne pas laisser la page afficher des
+dates passées. Soit on publie le catalogue suivant, soit on remplace le
+contenu par un message d'attente.
 
 ---
 
@@ -251,10 +281,13 @@ Le détail et l'état de chaque point sont dans `INFOS-MANQUANTES.md`.
   ascension », sur le panneau Agriculture du magasin. Pas encore
   utilisée sur le site, alors qu'elle dit en une phrase ce que la page
   d'accueil met trois paragraphes à expliquer.
-- **Une identité visuelle existe aussi** : lettrage peint jaune sur vert
-  avec feuilles sur l'enseigne de Brauhauban, plus un macaron montagne
-  « Aureilhan ». Le client dit ne pas avoir de logo : il y a au moins une
-  charte à récupérer auprès de son enseigniste.
+- **Un logo existe, c'est maintenant certain.** La couverture du
+  catalogue de promotions porte un macaron rond, vert et jaune, avec
+  « Aux Halles de la Ferme Deth Bosc » en lettrage script blanc. On
+  retrouve le même esprit sur l'enseigne peinte de Brauhauban, plus un
+  macaron montagne « Aureilhan ». Le client a répondu ne pas avoir de
+  logo : il faut lui redemander le fichier source, le site l'attend.
+  Tant qu'on ne l'a pas, le nom reste en typographie.
 - **« Aureilhan »** sur cette enseigne : siège de l'exploitation, ou
   troisième point de vente dont on n'a pas parlé ?
 - **Drive fermier, marché fermier, marchés gourmands** mentionnés sur
@@ -317,6 +350,7 @@ description, texte, attributs `alt`.
 | V1.9 | Mise en ligne sur lafermedethbosc.fr |
 | V1.10 | Nouveau numéro et nouveaux horaires d'Orleix |
 | V1.11 | Passage SEO : titres, descriptions, données structurées, fils d'Ariane |
+| V1.12 | Page promotions : catalogue du client refait aux couleurs du site |
 
 ---
 

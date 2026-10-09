@@ -1006,3 +1006,134 @@ section[id], article[id]{ scroll-margin-top:92px; }
 
   .places > :last-child:nth-child(odd) .place__media img{ aspect-ratio:4/3; }
 }
+
+/* =========================================================
+   CATALOGUE DES PROMOTIONS
+   ========================================================= */
+.catalogue{
+  display:grid; grid-template-columns:1fr minmax(300px,420px);
+  gap:clamp(32px,5vw,72px); align-items:center;
+}
+/* Sans ça, la piste de six pages impose sa largeur à la colonne et la
+   page déborde horizontalement : une piste de grille a min-width:auto. */
+.catalogue > *{ min-width:0; }
+.catalogue__lecteur, .liseuse, .liseuse__piste{ min-width:0; max-width:100%; }
+.catalogue__infos .sec-lead{ margin-bottom:0; }
+.catalogue__cta{ display:flex; flex-wrap:wrap; gap:12px; margin-top:2em; }
+
+.catalogue__lecteur{ width:100%; }
+
+.liseuse{
+  overflow-x:auto; overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  border-radius:var(--radius-lg);
+}
+.liseuse::-webkit-scrollbar{ display:none; }
+.liseuse:focus-visible{ outline:2px solid var(--green-flash); outline-offset:4px; }
+.liseuse__piste{ display:flex; gap:0; }
+
+/* Une page du catalogue */
+.promo{
+  flex:0 0 100%; scroll-snap-align:center; scroll-snap-stop:always;
+  display:flex; flex-direction:column;
+  aspect-ratio:2/3;
+  background:var(--cream-2); border:1px solid var(--sand);
+  border-radius:var(--radius-lg); overflow:hidden;
+}
+.promo__media{ margin:0; flex:1 1 auto; min-height:0; background:var(--sand); }
+.promo__media img{ width:100%; height:100%; object-fit:cover; display:block; }
+.promo__corps{
+  flex:0 0 auto; text-align:center;
+  padding:clamp(16px,2.6vw,24px) clamp(14px,2.4vw,22px) clamp(18px,2.8vw,26px);
+}
+.promo__nom{
+  font-size:clamp(1.25rem,3.4vw,1.6rem); line-height:1.1; color:var(--green);
+}
+.promo__variete{
+  margin:.4em 0 0; font-size:.72rem; font-weight:600;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft);
+}
+.promo__prix{
+  display:inline-flex; flex-direction:column; align-items:center; gap:.1em;
+  margin:1em 0 0; padding:.6em 1.1em;
+  background:var(--green-flash); color:var(--sur-flash);
+  border-radius:var(--radius-btn);
+}
+.promo__montant{
+  font-family:var(--serif); font-weight:600; letter-spacing:-.02em;
+  font-size:clamp(1.9rem,5.2vw,2.5rem); line-height:1;
+}
+.promo__unite{
+  font-size:.7rem; font-weight:600; letter-spacing:.13em; text-transform:uppercase;
+}
+.promo__detail{ white-space:nowrap; }
+
+/* La couverture */
+.promo--couverture{
+  background:var(--green); border-color:var(--green); color:var(--cream);
+  align-items:center; justify-content:center; text-align:center;
+  padding:clamp(24px,5vw,40px); gap:0;
+  position:relative; overflow:hidden;
+}
+.promo--couverture::before{
+  content:""; position:absolute; inset:14px; border:1px solid rgba(111,227,164,.35);
+  border-radius:12px; pointer-events:none;
+}
+.promo--couverture::after{
+  content:""; position:absolute; left:50%; top:-30%; width:130%; aspect-ratio:1;
+  translate:-50% 0; border-radius:50%;
+  background:radial-gradient(circle, rgba(31,206,122,.18), transparent 62%);
+  pointer-events:none;
+}
+.promo__enseigne{
+  margin:0; font-size:.76rem; font-weight:600;
+  letter-spacing:.2em; text-transform:uppercase; color:rgba(250,246,239,.72);
+}
+.promo__marque{
+  margin:.25em 0 0; font-family:var(--serif); font-weight:500;
+  font-size:clamp(1.7rem,5.4vw,2.3rem); line-height:1.05; letter-spacing:-.02em;
+}
+.promo__accroche{
+  margin:1.2em 0 0; font-family:var(--serif); font-style:italic; font-weight:300;
+  font-size:clamp(1.5rem,4.6vw,2rem); line-height:1.12; color:var(--green-clair);
+}
+.promo__dates{
+  margin:1.4em 0 0; padding:.55em 1.2em;
+  background:var(--green-flash); color:var(--sur-flash);
+  border-radius:var(--radius-btn);
+  font-size:.8rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+}
+
+/* Navigation du catalogue */
+.liseuse__nav{
+  display:flex; align-items:center; justify-content:center; gap:clamp(16px,3vw,28px);
+  margin-top:18px;
+}
+.liseuse__fleche{
+  width:46px; height:46px; display:grid; place-items:center;
+  background:var(--green-flash); color:var(--sur-flash);
+  border:0; border-radius:50%; cursor:pointer;
+  transition:background .3s, transform .3s var(--ease), opacity .3s;
+}
+.liseuse__fleche svg{ width:22px; height:22px; fill:currentColor; }
+.liseuse__fleche:hover:not(:disabled){ background:var(--green-flash-2); transform:scale(1.06); }
+.liseuse__fleche:disabled{ background:var(--sand); color:var(--green-soft); cursor:default; }
+.liseuse__compteur{
+  margin:0; min-width:4.5em; text-align:center;
+  font-size:.82rem; font-weight:600; letter-spacing:.12em;
+  color:var(--ink-soft); font-variant-numeric:tabular-nums;
+}
+.liseuse__aide{
+  margin:.9em 0 0; text-align:center;
+  font-size:.78rem; font-style:italic; color:var(--ink-soft);
+}
+
+@media (max-width:860px){
+  .catalogue{ grid-template-columns:1fr; }
+  .catalogue__lecteur{ max-width:420px; margin-inline:auto; }
+}
+@media (prefers-reduced-motion:reduce){
+  .liseuse{ scroll-behavior:auto; }
+}
