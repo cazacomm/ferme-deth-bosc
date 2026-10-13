@@ -1056,25 +1056,26 @@ section[id], article[id]{ scroll-margin-top:92px; }
 /* La même liste d'offres, en texte : lisible sans ouvrir les visuels,
    et c'est ce que les moteurs de recherche indexent. */
 .offres{ margin:2em 0 0; border-top:1px solid var(--sand); }
+/* Deux colonnes figées : le nom peut passer à la ligne autant qu'il veut,
+   la colonne des prix reste alignée. En flex, une offre au libellé plus
+   long renvoyait son prix à la ligne et cassait la colonne. */
 .offre{
-  display:flex; flex-wrap:wrap; align-items:baseline;
-  justify-content:space-between; gap:4px 18px;
-  padding:.85em 0; border-bottom:1px solid var(--sand);
+  display:grid; grid-template-columns:1fr auto; column-gap:16px;
+  align-items:baseline;
+  padding:.8em 0; border-bottom:1px solid var(--sand);
 }
-.offre__nom{ font-family:var(--serif); font-size:1.08rem; color:var(--green); }
+.offre__nom{ font-family:var(--serif); font-size:1.05rem; color:var(--green); }
 .offre__sous{
-  display:block; font-family:var(--sans); font-size:.76rem; font-weight:500;
-  letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft);
-  margin-top:.25em;
+  display:block; font-family:var(--sans); font-size:.72rem; font-weight:500;
+  letter-spacing:.05em; text-transform:uppercase; color:var(--ink-soft);
+  margin-top:.3em;
 }
-.offre__prix{ white-space:nowrap; text-align:right; }
+.offre__prix{ text-align:right; white-space:nowrap; }
 .offre__prix strong{
-  font-family:var(--serif); font-size:1.25rem; font-weight:600; color:var(--green-vif);
+  font-family:var(--serif); font-size:1.2rem; font-weight:600; color:var(--green-vif);
 }
-.offre__unite{ font-size:.82rem; color:var(--ink-soft); }
-.offre__detail{
-  display:block; font-size:.74rem; color:var(--ink-soft); margin-top:.15em;
-}
+.offre__unite{ display:block; font-size:.76rem; color:var(--ink-soft); margin-top:.15em; }
+.offre__detail{ display:block; font-size:.72rem; color:var(--ink-soft); margin-top:.1em; }
 
 /* Navigation du catalogue */
 .liseuse__nav{
@@ -1114,7 +1115,23 @@ section[id], article[id]{ scroll-margin-top:92px; }
 
 @media (max-width:860px){
   .catalogue{ grid-template-columns:1fr; }
-  .catalogue__lecteur{ max-width:420px; margin-inline:auto; }
+  /* Les visuels passent devant le texte : c'est eux qui donnent envie
+     de rester sur la page, les laisser sous la liste les rendait
+     invisibles sur un téléphone. */
+  .catalogue__lecteur{ order:-1; max-width:310px; margin-inline:auto; }
+  .catalogue__infos{ margin-top:2.2em; }
+
+  .offre{ padding:.7em 0; column-gap:12px; }
+  .offre__nom{ font-size:.96rem; }
+  .offre__sous{ font-size:.66rem; letter-spacing:.04em; }
+  .offre__prix strong{ font-size:1.05rem; }
+  .offre__unite{ font-size:.7rem; }
+  .offre__detail{ font-size:.66rem; }
+
+  /* Deux boutons de même largeur, côte à côte, plutôt que deux pavés
+     collés à gauche. */
+  .catalogue__cta{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .catalogue__cta .btn{ padding:.85em .6em; font-size:.8rem; text-align:center; }
 }
 @media (prefers-reduced-motion:reduce){
   .liseuse{ scroll-behavior:auto; }
