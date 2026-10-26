@@ -119,10 +119,11 @@ défaire**.
 Site **statique**, sans build, sans dépendance, sans CDN. Seules
 ressources externes : les polices Google et la carte Google Maps.
 
-### Les neuf pages
+### Les dix pages
 ```
 index.html               accueil : hero, ouvert aujourd'hui, renvois, vidéos
 promotions.html          catalogue des promos du moment
+fidelite.html            le programme de fidélité du magasin d'Orleix
 points-de-vente.html     Orleix et Brauhauban, horaires, itinéraires
 marches.html             Luz, Argelès-Gazost, Marcadieu
 nos-produits.html        les 7 rayons
@@ -162,6 +163,30 @@ bas de `index.html`, qui alimente la fiche Google.
 148 Mo). Les garder en local permet de refaire un recadrage ou un extrait
 sans redemander les fichiers. Les commandes `sips` et `ffmpeg` sont dans
 le README.
+
+### Le programme de fidélité
+Mis en place par le client en octobre 2026, au magasin d'Orleix
+uniquement et **sur le seul rayon fruits et légumes** (c'est l'algorithme
+des balances qui compte les points). 1 euro dépensé donne 1 point, 1
+point vaut 6 centimes de crédit, soit 5 %. Crédit utilisable à tout
+moment, sans délai ni plafond. Des journées points doubles portent la
+remise à 10 %.
+
+L'inscription se fait sur une fiche papier, qui sert aussi à inscrire le
+client à la **boucle WhatsApp pro** (offres flash de déstockage,
+nouveautés). La fiche est un PDF A4 produit à partir de
+`outils/fiche-fidelite.html`, à regénérer ainsi :
+
+```
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless \
+  --no-pdf-header-footer --virtual-time-budget=6000 \
+  --print-to-pdf=assets/docs/fiche-fidelite-ferme-deth-bosc.pdf \
+  outils/fiche-fidelite.html
+```
+
+Pas de formulaire en ligne : la consigne « téléphone et e-mail
+uniquement » vaut toujours. La fiche se rapporte en magasin ou s'envoie
+par e-mail.
 
 ### Le catalogue des promotions
 Le client produit lui-même ses visuels de catalogue et les envoie en
@@ -306,6 +331,12 @@ Le détail et l'état de chaque point sont dans `INFOS-MANQUANTES.md`.
   leur panneau. Si le drive existe, c'est un service à mettre en avant.
 - Sandwichs et traiteur, dépôt de pain, viennoiserie : déjà en ligne,
   marqués `data-needs="confirmation"`.
+- **Dates des journées points doubles.** Le client les annonce en
+  magasin et sur ses réseaux. Si elles sont connues à l'avance, les
+  afficher sur `fidelite.html`.
+- **La fiche d'inscription fidélité** est une création Caza Comm
+  (`outils/fiche-fidelite.html`, rendue en PDF). Si le client a déjà sa
+  propre fiche papier, la remplacer par la sienne.
 - Horaires exacts des marchés.
 - Texte de l'histoire de la ferme, rédigé à partir de leur mail.
 - Prénoms et rôles de l'équipe (la photo est en ligne, une sous-section
@@ -364,6 +395,8 @@ description, texte, attributs `alt`.
 | V1.11 | Passage SEO : titres, descriptions, données structurées, fils d'Ariane |
 | V1.12 | Page promotions : catalogue du client refait aux couleurs du site |
 | V1.13 | Vrais visuels d'automne, liseuse avec pastilles, liste des offres en texte |
+| V1.14 | Page offres reprise pour le mobile : prix alignés, visuels en tête |
+| V1.15 | Page fidélité, fiche d'inscription en PDF, renvoi sur l'accueil |
 
 ---
 

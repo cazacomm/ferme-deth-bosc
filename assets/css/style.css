@@ -1136,3 +1136,8 @@ section[id], article[id]{ scroll-margin-top:92px; }
 @media (prefers-reduced-motion:reduce){
   .liseuse{ scroll-behavior:auto; }
 }
+
+/* ---------- Fidélité ---------- */
+.pillars__grid--4 > :last-child:nth-child(odd){ grid-column:auto; }
+@media (min-width:1001px){ .pillars__grid--4{ grid-template-columns:repeat(4,1fr); } }
+@media (max-width:860px){ .fid__grid .callcard{ order:-1; margin-bottom:2.4em; } }

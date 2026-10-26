@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Fiche d'inscription fidélité, La Ferme Deth Bosc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,300..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @page{ size:A4; margin:0; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{
+    width:210mm; height:297mm; padding:14mm 15mm 10mm;
+    font-family:"Inter",Helvetica,Arial,sans-serif; color:#1A1714; background:#FFF;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+  .tete{ display:flex; justify-content:space-between; align-items:flex-end; border-bottom:2px solid #1E4A33; padding-bottom:5mm; }
+  .nom{ font-family:"Fraunces",Georgia,serif; font-size:19pt; line-height:1.05; color:#1E4A33; }
+  .nom em{ display:block; font-style:italic; font-weight:400; }
+  .lieu{ font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:#6B655D; text-align:right; line-height:1.7; }
+  h1{ font-family:"Fraunces",Georgia,serif; font-size:16pt; color:#1E4A33; margin:7mm 0 1.5mm; font-weight:600; }
+  .chapo{ font-size:9pt; color:#55504A; max-width:150mm; }
+
+  .regles{ display:grid; grid-template-columns:repeat(4,1fr); gap:3mm; margin:6mm 0 7mm; }
+  .regle{ background:#F4F7F2; border-radius:4mm; padding:4mm; border-left:1.2mm solid #1FCE7A; }
+  .regle b{ display:block; font-family:"Fraunces",Georgia,serif; font-size:12.5pt; color:#1E4A33; margin-bottom:1mm; font-weight:600; }
+  .regle span{ font-size:7.8pt; color:#55504A; line-height:1.45; display:block; }
+
+  h2{ font-size:8pt; letter-spacing:.16em; text-transform:uppercase; color:#C4622D; font-weight:600; margin:0 0 3.5mm; }
+  .grille{ display:grid; grid-template-columns:1fr 1fr; gap:6mm 8mm; }
+  .champ{ display:block; }
+  .champ--plein{ grid-column:1 / -1; }
+  .champ label{ display:block; font-size:8pt; color:#6B655D; margin-bottom:1.5mm; }
+  .ligne{ height:8mm; border-bottom:.4mm solid #CFC8BC; }
+  .cases{ display:flex; gap:2mm; }
+  .cases i{ display:block; width:7mm; height:8mm; border:.4mm solid #CFC8BC; border-radius:1.5mm; }
+
+  .whats{ margin-top:7mm; background:#F4F7F2; border-radius:4mm; padding:5mm; display:flex; gap:4mm; align-items:flex-start; }
+  .coche{ width:6mm; height:6mm; border:.5mm solid #1E4A33; border-radius:1.5mm; flex:none; margin-top:.5mm; }
+  .whats p{ font-size:8.5pt; color:#55504A; line-height:1.5; }
+  .whats b{ color:#1E4A33; font-size:9.5pt; display:block; margin-bottom:1mm; }
+
+  .signature{ display:grid; grid-template-columns:52mm 1fr; gap:8mm; margin-top:8mm; }
+  .cadre{ height:22mm; border:.4mm solid #CFC8BC; border-radius:3mm; }
+
+  footer{ position:absolute; left:15mm; right:15mm; bottom:8mm; border-top:.3mm solid #E6E0D6; padding-top:3mm;
+          font-size:7pt; color:#8A837A; line-height:1.5; display:flex; justify-content:space-between; gap:6mm; }
+</style>
+</head>
+<body>
+
+<div class="tete">
+  <div class="nom">La Ferme<em>Deth Bosc</em></div>
+  <div class="lieu">Aux Halles de la Ferme Deth Bosc<br>6 ter route de Rabastens, 65800 Orleix<br>06 98 92 62 86</div>
+</div>
+
+<h1>Fiche d’inscription au programme de fidélité</h1>
+<p class="chapo">Remplissez cette fiche et rapportez-la en magasin, ou envoyez-la nous par e-mail. Nous créons votre compte client aussitôt. C’est gratuit et sans engagement.</p>
+
+<div class="regles">
+  <div class="regle"><b>1 €</b><span>dépensé au rayon fruits et légumes</span></div>
+  <div class="regle"><b>1 point</b><span>crédité sur votre compte client</span></div>
+  <div class="regle"><b>6 cts</b><span>la valeur du point, soit 5&nbsp;% rendus</span></div>
+  <div class="regle"><b>Libre</b><span>utilisable à tout moment, sans plafond</span></div>
+</div>
+
+<h2>Vos coordonnées</h2>
+<div class="grille">
+  <div class="champ"><label>Nom</label><div class="ligne"></div></div>
+  <div class="champ"><label>Prénom</label><div class="ligne"></div></div>
+  <div class="champ champ--plein"><label>Adresse</label><div class="ligne"></div></div>
+  <div class="champ"><label>Code postal</label><div class="cases"><i></i><i></i><i></i><i></i><i></i></div></div>
+  <div class="champ"><label>Ville</label><div class="ligne"></div></div>
+  <div class="champ"><label>Téléphone mobile</label><div class="ligne"></div></div>
+  <div class="champ"><label>E-mail</label><div class="ligne"></div></div>
+</div>
+
+<div class="whats">
+  <div class="coche"></div>
+  <p><b>Je souhaite recevoir les offres sur la boucle WhatsApp</b>
+  Offres flash de déstockage, nouveautés et journées points doubles. Quelques messages par semaine au maximum. Vous pouvez en sortir à tout moment sur simple demande.</p>
+</div>
+
+<div class="signature">
+  <div class="champ"><label>Date</label><div class="ligne"></div></div>
+  <div class="champ"><label>Signature</label><div class="cadre"></div></div>
+</div>
+
+<footer>
+  <span>Programme valable au magasin d’Orleix, sur le rayon fruits et légumes.</span>
+  <span>Vos informations servent uniquement à votre compte fidélité et à nos informations commerciales. Elles ne sont jamais cédées. Pour les consulter, les corriger ou les supprimer : lafermedethbosc@gmail.com</span>
+</footer>
+
+</body>
+</html>
