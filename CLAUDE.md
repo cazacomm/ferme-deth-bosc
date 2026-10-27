@@ -168,9 +168,14 @@ le README.
 Mis en place par le client en octobre 2026, au magasin d'Orleix
 uniquement et **sur le seul rayon fruits et légumes** (c'est l'algorithme
 des balances qui compte les points). 1 euro dépensé donne 1 point, 1
-point vaut 6 centimes de crédit, soit 5 %. Crédit utilisable à tout
+point vaut 5 centimes de crédit, soit 5 %. Crédit utilisable à tout
 moment, sans délai ni plafond. Des journées points doubles portent la
 remise à 10 %.
+
+**Attention : c'est bien 5 centimes.** Le message WhatsApp du client
+disait « 6 centimes soit 5 % », ce qui est faux, 5 % d'un euro font 5
+centimes. Il a confirmé le 27 octobre 2026 que la bonne valeur est 5.
+Ne pas rétablir le 6 en relisant son message d'origine.
 
 L'inscription se fait sur une fiche papier, qui sert aussi à inscrire le
 client à la **boucle WhatsApp pro** (offres flash de déstockage,
