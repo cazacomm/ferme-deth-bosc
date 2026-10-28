@@ -193,6 +193,29 @@ Pas de formulaire en ligne : la consigne « téléphone et e-mail
 uniquement » vaut toujours. La fiche se rapporte en magasin ou s'envoie
 par e-mail.
 
+### Où vont les annonces, sans créer de page
+Le site est à dix pages et Jérémy a posé la règle le 28 octobre 2026 :
+**on n'en ajoute plus pour une annonce.** Les nouveautés du client
+(nouveau produit, récolte, opération) se placent ainsi :
+
+1. le détail va en **mise en avant en tête de `promotions.html`**, qui
+   devient la page des actualités commerciales, avant le catalogue ;
+2. l'accueil porte **une seule bande saisonnière**, celle qui est
+   d'actualité. Elle remplace la précédente, elle ne s'ajoute pas ;
+3. si l'annonce touche la fidélité, une ligne dans l'encart « Des tarifs
+   réservés » de `fidelite.html` suffit.
+
+Le composant de la mise en avant est `.haricot` dans la feuille de
+style. Le nom vient du premier usage, il est générique : bandeau vert
+foncé, surtitre, titre, accroche, une ligne fidélité et un bouton.
+
+**Le haricot tarbais frais, récolte 2026** (annonce du 28 octobre 2026) :
+cultivé sur leur exploitation, vendu à Orleix et à Brauhauban, 5 € de
+remise par filet pour les clients du programme de fidélité, pré commande
+par un formulaire Google que le client héberge lui-même. Quand la
+récolte sera finie, retirer la bande de l'accueil et la mise en avant de
+`promotions.html`.
+
 ### Le catalogue des promotions
 Le client produit lui-même ses visuels de catalogue et les envoie en
 images, avec un petit lecteur HTML autour.
@@ -342,6 +365,10 @@ Le détail et l'état de chaque point sont dans `INFOS-MANQUANTES.md`.
 - **La fiche d'inscription fidélité** est une création Caza Comm
   (`outils/fiche-fidelite.html`, rendue en PDF). Si le client a déjà sa
   propre fiche papier, la remplacer par la sienne.
+- **Haricot tarbais : le prix du filet et son poids.** Le client annonce
+  « 5 € d'économie par filet » sans dire le prix de départ. Le site
+  reprend donc son chiffre tel quel. Une photo des filets manque aussi,
+  aucune n'est dans les sources.
 - Horaires exacts des marchés.
 - Texte de l'histoire de la ferme, rédigé à partir de leur mail.
 - Prénoms et rôles de l'équipe (la photo est en ligne, une sous-section
@@ -402,6 +429,7 @@ description, texte, attributs `alt`.
 | V1.13 | Vrais visuels d'automne, liseuse avec pastilles, liste des offres en texte |
 | V1.14 | Page offres reprise pour le mobile : prix alignés, visuels en tête |
 | V1.15 | Page fidélité, fiche d'inscription en PDF, renvoi sur l'accueil |
+| V1.16 | Haricot tarbais : mise en avant sur les offres, bande d'accueil, sans page en plus |
 
 ---
 
